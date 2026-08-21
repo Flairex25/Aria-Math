@@ -93,6 +93,7 @@ public:
 	void aFormatTimeString(int timeValue);
 	//===================
 	//Randomization
+	void aSetRandomSeed(int randomSeed);
 	void aCreateBagRandomizer(const TCHAR* ID);
 	void aResetBagRandomizer(const TCHAR* ID);
 	void aDeleteBagRandomizer(const TCHAR* ID);
