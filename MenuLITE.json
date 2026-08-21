@@ -7,7 +7,7 @@
 		"About": {
 			"Name": "Aria Math LITE",
 			"Author": "Flairex",
-			"Comment": "The all in one math extension",
+			"Comment": "The all in one math extension (Free Edition)",
 			"Copyright": "Copyright \u00A9 2026 by Flairex",
 			"Help": "Site Name", //Make help site
 			"URL": "Site URL" //Make help site
@@ -27,6 +27,8 @@
 			//Randomization
 			[
 				"Randomization",
+				[ 91, "Set Random Seed", true ],
+				"---",
 				[ 1, "Create Bag Randomizer", true ],
 				[ 2, "Reset Bag Randomizer", true ],
 				[ 3, "Delete Bag Randomizer", true ],
@@ -1305,8 +1307,15 @@
 					[ "Float", "Lerp Amount" ],
 					[ "String", "New Vector ID" ]
 				]
-			} //90
+			}, //90
 			//=============================================
+			//Randomization
+			{
+				"Title": "Set Random Seed to: %0",
+				"Parameters": [
+					[ "Integer", "Random Seed (0 = random)" ]
+				]
+			} //91
 		],
 		//====================================================================================================================================================================
 		//CONDITIONS
