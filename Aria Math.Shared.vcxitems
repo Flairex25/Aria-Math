@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{87c80d24-efe7-47aa-ad97-460c54ab762f}</ItemsProjectGuid>
+    <ItemsProjectName>Aria Math.Shared</ItemsProjectName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory.TrimEnd('/\'))</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\Inc\Shared\AllPlatformDefines.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\Inc\Shared\DarkEdif.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\Inc\Shared\Edif.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\Inc\Shared\Strings.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\Inc\Shared\json.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\Inc\Shared\NonWindowsDefines.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\Inc\Shared\ObjectSelection.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\Inc\Shared\SurfaceMultiPlat.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\AriaColors.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\AriaStrings.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\AriaTime.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\BagRandomizer.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\DeltaTime.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\FloatArrays.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\Functions.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\IntArrays.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\Math.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\StringArrays.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\Vector2.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\Vector3.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Extension.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\Lib\Shared\DarkEdif.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\Lib\Shared\Edif.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\Lib\Shared\Edif.General.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\Lib\Shared\Edif.Runtime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\Lib\Shared\json.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\Lib\Shared\ObjectSelection.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\Lib\Shared\SurfaceMultiPlat.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Actions.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\AriaColors.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\AriaStrings.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\AriaTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\BagRandomizer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\DeltaTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\FloatArrays.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\Functions.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\IntArrays.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\Math.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\StringArrays.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\Vector2.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\Vector3.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Conditions.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Expressions.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Extension.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Runtime.cpp" />
+  </ItemGroup>
+</Project>

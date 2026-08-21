@@ -1,0 +1,3020 @@
+{
+	// 4-character identifer that uniquely identifies your extension.
+	// Can be letters, numbers, or punctuation, but must be 4 ASCII characters.
+	"Identifier": "ArMt",
+	"Dependencies": "",
+	"UK English": {
+		"About": {
+			"Name": "Aria Math LITE",
+			"Author": "Flairex",
+			"Comment": "The all in one math extension",
+			"Copyright": "Copyright \u00A9 2026 by Flairex",
+			"Help": "Site Name", //Make help site
+			"URL": "Site URL" //Make help site
+		},
+		//====================================================================================================================================================================
+		//ACTIONS
+		//====================================================================================================================================================================
+		"ActionMenu": [
+			//=============================================
+			//Time Formatting
+			[
+				"Time",
+				[ 0, "Format Time String" ]
+			],
+			"---",
+			//=============================================
+			//Randomization
+			[
+				"Randomization",
+				[ 1, "Create Bag Randomizer", true ],
+				[ 2, "Reset Bag Randomizer", true ],
+				[ 3, "Delete Bag Randomizer", true ],
+				"---",
+				[ 4, "Add Value to Bag Randomizer", true ],
+				[ 5, "Remove Value from Bag Randomizer", true ]
+			],
+			"---",
+			//=============================================
+			//Delta Time/Ticks
+			[
+				"Delta Time",
+				//[ 6, "Enable Ticks" ],
+				//[ 7, "Disable Ticks" ],
+				//"---",
+				[ 8, "Calculate Delta Time" ],
+				[ 9, "Set Delta Time Base" ],
+				"---",
+				[ 10, "Set Game Speed", true ],
+				[ 11, "Pause Game Speed", true ],
+				[ 12, "Resume Game Speed", true ],
+				"---",
+				//[ 13, "Set Tick Rate" ],
+				[ 14, "Set Old Timer" ]
+			],
+			"---",
+			//=============================================
+			//Function Parameters
+			[
+				"Function Parameters",
+				[ 15, "Set Function Integer Parameter" ],
+				[ 16, "Set Function Float Parameter" ],
+				[ 17, "Set Function String Parameter" ]
+			],
+			//"---",
+			//Function Returns
+			[
+				"Function Returns",
+				[ 18, "Set Function Integer Return" ],
+				[ 19, "Set Function Float Return" ],
+				[ 20, "Set Function String Return" ]
+			],
+			//"---",
+			//Functions
+			[
+				"Functions",
+				[ 21, "Call Function" ],
+				[ 22, "Call Function Loop", true ],
+				//[ 23, "Call Function with Immediate Parameters" ],
+				"---",
+				[ 24, "Resume Function Loop", true ],
+				[ 25, "Stop Function Loop", true ],
+				[ 26, "Set Function Loop Index", true ]
+			],
+			"---",
+			//=============================================
+			//Integer Arrays
+			[
+				"Integer Arrays",
+				[ 27, "Create Integer Array" ],
+				[ 28, "Delete Integer Array" ],
+				"---",
+				[ 29, "Set Integer Array Element" ],
+				[ 30, "Delete Integer Array Element" ],
+				"---",
+				[ 31, "Sort Integer Array (Ascending)" ],
+				[ 32, "Sort Integer Array (Descending)" ],
+				"---",
+				[ 33, "Loop through Integer Array" ],
+				[ 34, "Loop through Integer Array in Reverse" ],
+				"---",
+				[ 35, "Set Integer Array Loop ID" ],
+				"---",
+				[ 36, "Parse string into Int Array", true ],
+				"---",
+				[ 37, "Resume Array Loop" ],
+				[ 38, "Stop Array Loop" ],
+				[ 39, "Set Array Loop Index" ]
+			],
+			//"---",
+			//Float Arrays
+			[
+				"Float Arrays",
+				[ 40, "Create Float Array", true ],
+				[ 41, "Delete Float Array", true ],
+				"---",
+				[ 42, "Set Float Array Element", true ],
+				[ 43, "Delete Float Array Element", true ],
+				"---",
+				[ 44, "Sort Float Array (Ascending)", true ],
+				[ 45, "Sort Float Array (Descending)", true ],
+				"---",
+				[ 46, "Loop through Float Array", true ],
+				[ 47, "Loop through Float Array in Reverse", true ],
+				"---",
+				[ 48, "Set Float Array Loop ID", true ],
+				"---",
+				[ 49, "Parse string into Float Array", true ],
+				"---",
+				[ 50, "Resume Array Loop", true ],
+				[ 51, "Stop Array Loop", true ],
+				[ 52, "Set Array Loop Index", true ]
+			],
+			//"---",
+			//String Arrays
+			[
+				"String Arrays",
+				[ 53, "Create String Array", true ],
+				[ 54, "Delete String Array", true ],
+				"---",
+				[ 55, "Set String Array Element", true ],
+				[ 56, "Delete String Array Element", true ],
+				"---",
+				[ 57, "Sort Integer Array By String Length (Ascending)", true ],
+				[ 58, "Sort String Array By String Length (Descending)", true ],
+				[ 59, "Sort Integer Array By Alphabetical Order (Ascending)", true ],
+				[ 60, "Sort String Array By Alphabetical Order (Descending)", true ],
+				"---",
+				[ 61, "Loop through String Array", true ],
+				[ 62, "Loop through String Array in Reverse", true ],
+				"---",
+				[ 63, "Set Integer Array Loop ID", true ],
+				"---",
+				[ 64, "Parse string into String Array", true ],
+				"---",
+				[ 65, "Resume Array Loop", true ],
+				[ 66, "Stop Array Loop", true ],
+				[ 67, "Set Array Loop Index", true ]
+			],
+			"---",
+			//=============================================
+			//2D Vectors
+			[
+				"2D Vectors",
+				[ 68, "Set a 2D Vector" ],
+				[ 69, "Delete a 2D Vector" ],
+				"---",
+				[ 70, "Set X of 2D Vector" ],
+				[ 71, "Set Y of 2D Vector" ],
+				"---",
+				[ 72, "Scale a 2D Vector" ],
+				[ 73, "Get the Unit of a 2D Vector" ],
+				[ 74, "Add 2 2D Vectors" ],
+				[ 75, "Subtract 2 2D Vectors" ],
+				[ 76, "Multiply 2 2D Vectors" ],
+				[ 77, "Divide 2 2D Vectors" ],
+				[ 78, "Lerp Between 2 2D Vectors" ]
+			],
+			//"---",
+			//3D Vectors
+			[
+				"3D Vectors",
+				[ 79, "Set a 3D Vector" ],
+				[ 80, "Delete a 3D Vector" ],
+				"---",
+				[ 81, "Set X of 3D Vector" ],
+				[ 82, "Set Y of 3D Vector" ],
+				[ 83, "Set Z of 3D Vector" ],
+				"---",
+				[ 84, "Scale a 3D Vector" ],
+				[ 85, "Get the Unit of a 3D Vector" ],
+				[ 86, "Add 2 3D Vectors" ],
+				[ 87, "Subtract 2 3D Vectors" ],
+				[ 88, "Multiply 2 3D Vectors" ],
+				[ 89, "Divide 2 3D Vectors" ],
+				[ 90, "Lerp Between 2 3D Vectors" ]
+			],
+			"---"
+			//=============================================
+		],
+		//====================================================================================================================================================================
+		//CONDITIONS
+		//====================================================================================================================================================================
+		"ConditionMenu": [
+			//=============================================
+			//DeltaTime/Ticks
+			[
+				"Delta Time",
+				//[ 0, "On Tick" ],
+				//"---",
+				[ 1, "Is Game Speed Paused", true ],
+				[ 2, "On Game Speed Paused", true ],
+				[ 3, "On Game Speed Resumed", true ],
+				[ 4, "On Game Speed Changed", true ]
+			],
+			"---",
+			//=============================================
+			//Functions
+			[
+				"Functions",
+				[ 5, "On Function" ],
+				"---",
+				[ 6, "Function Loop Index Equals", true ]
+			],
+			"---",
+			//=============================================
+			//Integer Arrays
+			[
+				"Integer Arrays",
+				[ 7, "On Array Loop" ],
+				[ 8, "Array Loop ID Equals" ],
+				"---",
+				[ 9, "Current Index Equals" ],
+				[ 10, "Current Value Equals" ],
+				[ 11, "Value Exists in Array" ]
+			],
+			//"---",
+			//Float Arrays
+			[
+				"Float Arrays",
+				[ 12, "On Array Loop", true ],
+				[ 13, "Array Loop ID Equals", true ],
+				"---",
+				[ 14, "Current Index Equals", true ],
+				[ 15, "Current Value Equals", true ],
+				[ 16, "Value Exists in Array", true ]
+			],
+			//"---",
+			//String Arrays
+			[
+				"String Arrays",
+				[ 17, "On Array Loop", true ],
+				[ 18, "Array Loop ID Equals", true ],
+				"---",
+				[ 19, "Current Index Equals", true ],
+				[ 20, "Current Value Equals", true ],
+				[ 21, "Value Exists in Array", true ]
+			],
+			"---",
+			//=============================================
+			//Runtime
+			[
+				"Runtime",
+				[ 22, "Is Running in Editor" ],
+				[ 23, "Is Running in Sub-Application" ]
+			],
+			"---"
+			//=============================================
+		],
+		//====================================================================================================================================================================
+		//EXPRESSIONS
+		//====================================================================================================================================================================
+		"ExpressionMenu": [
+			//=============================================
+			//Constants
+			[
+				"Constants",
+				[ 0, "e" ],
+				[ 1, "pi" ],
+				[ 2, "tau" ],
+				[ 3, "phi" ],
+				[ 4, "gamma" ],
+				[ 5, "root2" ],
+				[ 6, "root3" ]
+			],
+			"---",
+			//=============================================
+			//Exponents/Logs
+			[
+				"Exponents/Logs",
+				[ 7, "Raise e to a power" ],
+				[ 8, "Raise 10 to a power" ],
+				[ 9, "Raise 2 to a power" ],
+				[ 10, "Raise a base to a power" ],
+				"---",
+				[ 11, "Calculate Log with base e" ],
+				[ 12, "Calculate Log with base 10" ],
+				[ 13, "Calculate Log with base 2" ],
+				[ 14, "Calculate Log with a base" ]
+			],
+			//"---",
+			//=============================================
+			//Roots
+			[
+				"Roots",
+				[ 15, "Calculate Square Root" ],
+				[ 16, "Calculate Cube Root" ],
+				[ 17, "Calculate Nth Root" ],
+				[ 18, "Calculate Inverse Square Root" ]
+			],
+			//"---",
+			//=============================================
+			//Trigonometry
+			[
+				"Trigonometry",
+				[ 19, "Convert to Radians" ],
+				[ 20, "Convert to Degrees" ],
+				"---",
+				[ 21, "Sine (Radians)" ],
+				[ 22, "Sine (Degrees)" ],
+				[ 23, "Cosine (Radians)" ],
+				[ 24, "Cosine (Degrees)" ],
+				[ 25, "Tangent (Radians)" ],
+				[ 26, "Tangent (Degrees)" ],
+				"---",
+				[ 27, "Cosecant (Radians)" ],
+				[ 28, "Cosecant (Degrees)" ],
+				[ 29, "Secant (Radians)" ],
+				[ 30, "Secant (Degrees)" ],
+				[ 31, "Cotangent (Radians)" ],
+				[ 32, "Cotangent (Degrees)" ],
+				"---",
+				[ 33, "Hyperbolic Sine (Radians)" ],
+				[ 34, "Hyperbolic Sine (Degrees)" ],
+				[ 35, "Hyperbolic Cosine (Radians)" ],
+				[ 36, "Hyperbolic Cosine (Degrees)" ],
+				[ 37, "Hyperbolic Tangent (Radians)" ],
+				[ 38, "Hyperbolic Tangent (Degrees)" ],
+				"---",
+				[ 39, "Inverse Sine" ],
+				[ 40, "Inverse Cosine" ],
+				[ 41, "Inverse Tangent" ],
+				"---",
+				[ 42, "Inverse Cosecant" ],
+				[ 43, "Inverse Secant" ],
+				[ 44, "Inverse Cotangent" ],
+				"---",
+				[ 45, "Inverse Hyperbolic Sine" ],
+				[ 46, "Inverse Hyperbolic Cosine" ],
+				[ 47, "Inverse Hyperbolic Tangent" ]
+			],
+			//"---",
+			//=============================================
+			//Factorials
+			[
+				"Factorials",
+				[ 48, "Factorial of Integer" ],
+				[ 49, "Factorial of Float" ]
+			],
+			//"---",
+			//=============================================
+			//Operations
+			[
+				"Operations",
+				[ 50, "Clamp Integer" ],
+				[ 51, "Clamp Float" ],
+				[ 52, "Min of 2 Integers" ],
+				[ 53, "Min of 2 Floats" ],
+				[ 54, "Max of 2 Integers" ],
+				[ 55, "Max of 2 Floats" ],
+				"---",
+				[ 56, "Round" ],
+				[ 57, "Round to decimal" ],
+				[ 58, "Floor" ],
+				[ 59, "Floor to decimal" ],
+				[ 60, "Ceil" ],
+				[ 61, "Ceil to decimal" ],
+				"---",
+				[ 62, "Absolute Value of Integer" ],
+				[ 63, "Absolute Value of Float" ],
+				[ 64, "Sign of Value" ],
+				[ 65, "Modulus of Integer" ],
+				[ 66, "Modulus of Float" ],
+				[ 67, "Div Integers" ],
+				[ 68, "Div Floats" ],
+				[ 69, "Remainder of Integers" ],
+				[ 70, "Remainder of Floats" ]
+			],
+			//"---",
+			//=============================================
+			//Comparisons
+			[
+				"Comparisons",
+				[ 71, "A equals B" ],
+				[ 72, "A does not equal B" ],
+				[ 73, "A is greater than B" ],
+				[ 74, "A is greater than or equal to B" ],
+				[ 75, "A is less than B" ],
+				[ 76, "A is less than or equal to B" ]
+			],
+			//"---",
+			//=============================================
+			//Linear Interpolation
+			[
+				"Linear Interpolation",
+				[ 77, "Lerp" ],
+				[ 78, "Lerp (Smooth)", true ],
+				[ 79, "Point Slope" ]
+			],
+			//"---",
+			//=============================================
+			//Easing
+			[
+				"Easing",
+				[ 80, "Constant Easing" ],
+				[ 81, "Linear Easing" ],
+				[ 82, "Quadratic Easing" ],
+				[ 83, "Cubic Easing" ],
+				[ 84, "Quartic Easing" ],
+				[ 85, "Polynomial Easing" ],
+				[ 86, "Exponential Easing" ],
+				[ 87, "Sine Easing" ],
+				[ 88, "Circular Easing" ],
+				[ 89, "Back Easing" ],
+				[ 90, "Bounce Easing" ],
+				[ 91, "Elastic Easing" ]
+			],
+			//"---",
+			//=============================================
+			//Easing
+			[
+				"Decay Timer Formulas",
+				[ 92, "Exponential Decay", true ],
+				[ 93, "Square Root Decay", true ]
+			],
+			//"---",
+			//=============================================
+			//Colors
+			[
+				"Colors",
+				[ 94, "From RGB" ],
+				[ 95, "From HSV" ],
+				[ 96, "From HEX" ],
+				"---",
+				[ 97, "Red Value of Color" ],
+				[ 98, "Green Value of Color" ],
+				[ 99, "Blue Value of Color" ],
+				"---",
+				[ 100, "Get Hue of Color" ],
+				[ 101, "Get Saturation of Color" ],
+				[ 102, "Get Brightness of Color" ],
+				"---",
+				[ 103, "Get HEX value from Color" ]
+			],
+			//"---",
+			//=============================================
+			//Other
+			[
+				"Other",
+				[ 104, "Error Function" ]
+			],
+			"---",
+			//=============================================
+			//Boolean
+			[
+				"Boolean",
+				[ 105, "Convert to Boolean" ],
+				"---",
+				[ 106, "NOT" ],
+				"---",
+				[ 107, "AND" ],
+				[ 108, "NAND" ],
+				"---",
+				[ 109, "OR" ],
+				[ 110, "NOR" ],
+				"---",
+				[ 111, "XOR" ],
+				[ 112, "XNOR" ],
+				"---",
+				[ 113, "Implies" ],
+				[ 114, "NImplies" ]
+			],
+			//"---",
+			//=============================================
+			//Bitwise
+			[
+				"Bitwise",
+				[ 115, "Bitshift Left" ],
+				[ 116, "Bitshift Right" ],
+				"---",
+				[ 117, "Bitwise NOT" ],
+				"---",
+				[ 118, "Bitshift AND" ],
+				[ 119, "Bitshift NAND" ],
+				"---",
+				[ 120, "Bitshift OR" ],
+				[ 121, "Bitshift NOR" ],
+				"---",
+				[ 122, "Bitshift XOR" ],
+				[ 123, "Bitshift XNOR" ],
+				"---",
+				[ 124, "Bitshift Implies" ],
+				[ 125, "Bitshift NImplies" ],
+				"---",
+				[ 126, "Two's Complement" ]
+			],
+			"---",
+			//=============================================
+			//Time
+			[
+				"Time",
+				[ 127, "Get Hour Value" ],
+				[ 128, "Get Minute Value" ],
+				[ 129, "Get Seconds Value" ],
+				[ 130, "Get Milliseconds Value" ],
+				"---",
+				[ 131, "Get Hour String" ],
+				[ 132, "Get Minute String" ],
+				[ 133, "Get Seconds String" ],
+				[ 134, "Get Milliseconds String" ],
+				[ 135, "Get Full Time String" ],
+				"---",
+				[ 136, "Get Current Month", true ],
+				[ 137, "Get Current Day", true ],
+				[ 138, "Get Current Year", true ],
+				[ 139, "Get Current Date", true ],
+				"---",
+				[ 140, "Get Current Hours", true ],
+				[ 141, "Get Current Minutes", true ],
+				[ 142, "Get Current Seconds", true ],
+				[ 143, "Get Current Time", true ]
+			],
+			"---",
+			//=============================================
+			//Randomization
+			[
+				"Randomization",
+				[ 144, "Get Random Integer from 0 to n-1" ],
+				[ 145, "Get Random Integer from 1 to n" ],
+				[ 146, "Get Random Integer within range" ],
+				[ 147, "Get Random Float within range" ],
+				"---",
+				[ 148, "Get Index from Bag Randomizer", true ],
+				[ 149, "Get Value from Bag Randomizer", true ]
+			],
+			"---",
+			//=============================================
+			//Delta Time/Ticks
+			[
+				"Delta Time",
+				[ 150, "Get Delta Time (Frames)" ],
+				[ 151, "Get Delta Time (Seconds)" ],
+				"---",
+				[ 152, "Get Game Speed", true ],
+				"---",
+				[ 153, "Get Delta Time Base" ],
+				//[ 154, "Get Tick Rate" ],
+				[ 155, "Get Old Timer" ]
+			],
+			"---",
+			//=============================================
+			//Functions
+			[
+				"Functions",
+				[ 156, "Get Integer Parameter of Function" ],
+				[ 157, "Get Float Parameter of Function" ],
+				[ 158, "Get String Parameter of Function" ],
+				"---",
+				[ 159, "Get Integer Return of Function" ],
+				[ 160, "Get Float Return of Function" ],
+				[ 161, "Get String Return of Function" ],
+				"---",
+				[ 162, "Get Loop Index of Function", true ]
+				//"---",
+				//[ 163, "Format Function Parameter" ]
+			],
+			"---",
+			//=============================================
+			//Int Arrays
+			[
+				"Integer Arrays",
+				[ 164, "Get Value from Int Array" ],
+				[ 165, "Get Loop Index from Int Array" ],
+				[ 166, "Get Value from Int Array at Loop Index" ],
+				[ 167, "Get Size of Int Array" ],
+				"---",
+				[ 168, "Get Loop ID of Int Array" ],
+				"---",
+				[ 169, "Get Printout of Int Array" ]
+			],
+			//"---",
+			//Float Arrays
+			[
+				"Float Arrays",
+				[ 170, "Get Value from Float Array", true ],
+				[ 171, "Get Loop Index from Float Array", true ],
+				[ 172, "Get Value from Float Array at Loop Index", true ],
+				[ 173, "Get Size of Float Array", true ],
+				"---",
+				[ 174, "Get Loop ID of Float Array", true ],
+				"---",
+				[ 175, "Get Printout of Float Array", true ]
+			],
+			//"---",
+			//String Arrays
+			[
+				"String Arrays",
+				[ 176, "Get Value from String Array", true ],
+				[ 177, "Get Loop Index from String Array", true ],
+				[ 178, "Get Value from String Array at Loop Index", true ],
+				[ 179, "Get Size of String Array", true ],
+				"---",
+				[ 180, "Get Loop ID of String Array", true ],
+				"---",
+				[ 181, "Get Printout of String Array", true ]
+			],
+			"---",
+			//=============================================
+			//2D Vectors
+			[
+				"2D Vectors",
+				[ 182, "Get Dimension of 2D Vector" ],
+				[ 183, "Get X of 2D Vector" ],
+				[ 184, "Get Y of 2D Vector" ],
+				[ 185, "Get Magnitude of 2D Vector" ],
+				[ 186, "Get Dot Product of 2D Vector" ]
+			],
+			//"---",
+			//3D Vectors
+			[
+				"3D Vectors",
+				[ 187, "Get Dimension of 3D Vector" ],
+				[ 188, "Get X of 3D Vector" ],
+				[ 189, "Get Y of 3D Vector" ],
+				[ 190, "Get Z of 3D Vector" ],
+				[ 191, "Get Magnitude of 3D Vector" ],
+				[ 192, "Get Dot Product of 3D Vector" ]
+			],
+			"---"
+		],
+		//====================================================================================================================================================================
+		//ACTIONS
+		//====================================================================================================================================================================
+		"Actions": [
+			//=============================================
+			//Time Formatting
+			{
+				"Title": "Format Time String: %0",
+				"Parameters": [
+					[ "Integer", "Time (Milliseconds)" ]
+				]
+			}, //0
+			//=============================================
+			//Randomization
+			{
+				"Title": "Create Bag Randomizer: %0",
+				"Parameters": [
+					[ "String", "Randomizer ID" ]
+				]
+			}, //1
+			{
+				"Title": "Reset Bag Randomizer: %0",
+				"Parameters": [
+					[ "String", "Randomizer ID" ]
+				]
+			}, //2
+			{
+				"Title": "Delete Bag Randomizer: %0",
+				"Parameters": [
+					[ "String", "Randomizer ID" ]
+				]
+			}, //3
+			//======
+			{
+				"Title": "Add Value %1 Bag Randomizer: %0",
+				"Parameters": [
+					[ "String", "Randomizer ID" ],
+					[ "Integer", "Value" ]
+				]
+			}, //4
+			{
+				"Title": "Delete Index %1 from Bag Randomizer: %0",
+				"Parameters": [
+					[ "String", "Randomizer ID" ],
+					[ "Integer", "Index" ]
+				]
+			}, //5
+			//=============================================
+			//Delta Time/Ticks
+			{
+				"Title": "Enable Ticks",
+				"Parameters": [
+				]
+			}, //6
+			{
+				"Title": "Disable Ticks",
+				"Parameters": [
+				]
+			}, //7
+			//======
+			{
+				"Title": "Calculate Delta Time",
+				"Parameters": [
+					[ "Integer", "Timer" ]
+				]
+			}, //8
+			{
+				"Title": "Set Delta Time Base to: %0FPS",
+				"Parameters": [
+					[ "Integer", "Base FPS" ]
+				]
+			}, //9
+			{
+				"Title": "Set Game Speed to: %0",
+				"Parameters": [
+					[ "Float", "Game Speed" ]
+				]
+			}, //10
+			{
+				"Title": "Pause Game Speed",
+				"Parameters": [
+				]
+			}, //11
+			{
+				"Title": "Resume Game Speed",
+				"Parameters": [
+				]
+			}, //12
+			//======
+			{
+				"Title": "Set Tick Rate to: %0ms",
+				"Parameters": [
+					[ "Integer", "Tick Rame" ]
+				]
+			}, //13
+			{
+				"Title": "Set Old Timer to: %0ms",
+				"Parameters": [
+					[ "Integer", "Old Timer" ]
+				]
+			}, //14
+			//=============================================
+			//Function Parameters
+			{
+				"Title": "Set Function %0 Integer Parameter %1 to: %2",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "String", "Parameter" ],
+					[ "Integer", "Value" ]
+				]
+			}, //15
+			{
+				"Title": "Set Function %0 Float Parameter %1 to: %2",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "String", "Parameter" ],
+					[ "Float", "Value" ]
+				]
+			}, //16
+			{
+				"Title": "Set Function %0 String Parameter %1 to: %2",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "String", "Parameter" ],
+					[ "String", "Value" ]
+				]
+			}, //17
+			//Function Returns
+			{
+				"Title": "Set Function %0 Integer Return to: %1",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "Integer", "Value" ]
+				]
+			}, //18
+			{
+				"Title": "Set Function %0 Float Return to: %1",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "Float", "Value" ]
+				]
+			}, //19
+			{
+				"Title": "Set Function %0 String Return to: %1",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "String", "Value" ]
+				]
+			}, //20
+			//Functions
+			{
+				"Title": "Call Function: %0 (Immediately Delete = %1)",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "Integer", "Delete Params? (Leave 0 if unsure)" ]
+				]
+			}, //21
+			{
+				"Title": "Call Function: %0 %1 times (Immediately Delete = %2)",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "Integer", "Loop Amount" ],
+					[ "Integer", "Delete Params? (Leave 0 if unsure)" ]
+				]
+			}, //22
+			{
+				"Title": "Call Function: %0 with params %2, %3, %4, %5, %6, (Immediately Delete = %1)",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "Integer", "Delete Params? (Leave 0 if unsure)" ],
+					[ "String", "Param1 (Format: 'Name-Type-Value') (Leave blank if none)" ],
+					[ "String", "Param2 (Format: 'Name-Type-Value') (Leave blank if none)" ],
+					[ "String", "Param3 (Format: 'Name-Type-Value') (Leave blank if none)" ],
+					[ "String", "Param4 (Format: 'Name-Type-Value') (Leave blank if none)" ],
+					[ "String", "Param5 (Format: 'Name-Type-Value') (Leave blank if none)" ]
+				]
+			}, //23
+			{
+				"Title": "Resume Function Loop: %0 (Immediately Delete = %1)",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "Integer", "Delete Params? (Leave 0 if unsure)" ]
+				]
+			}, //24
+			{
+				"Title": "Stop Function Loop: %0",
+				"Parameters": [
+					[ "String", "Function ID" ]
+				]
+			}, //25
+			{
+				"Title": "Set Loop Index of Function: %0 to %1",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "Integer", "Index (Starts at 0)" ]
+				]
+			}, //26
+			//=============================================
+			//Integer Arrays
+			{
+				"Title": "Create IntArray: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //27
+			{
+				"Title": "Delete IntArray: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //28
+			//======
+			{
+				"Title": "Set IntArray %0 [%1] to: %2",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Index (Starts at 0)" ],
+					[ "Integer", "Value" ]
+				]
+			}, //29
+			{
+				"Title": "Delete IntArray %0 [%1]",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Index (Starts at 0)" ]
+				]
+			}, //30
+			//======
+			{
+				"Title": "Sort IntArray %0 in Ascending order",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //31
+			{
+				"Title": "Sort IntArray %0 in Descending order",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //32
+			//======
+			{
+				"Title": "Loop Through IntArray: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //33
+			{
+				"Title": "Loop Through IntArray: %0 in reverse",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //34
+			//======
+			{
+				"Title": "Set IntArray %0 Loop ID to: %1",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "Loop ID" ]
+				]
+			}, //35
+			//======
+			{
+				"Title": "Parse String %1 into IntArray: %0 with delimiter %2",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "String" ],
+					[ "String", "Delimiter" ]
+				]
+			}, //36
+			//======
+			{
+				"Title": "Resume IntArray Loop: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //37
+			{
+				"Title": "Stop IntArray Loop: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //38
+			{
+				"Title": "Set IntArray Loop %0 index to: %1",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Loop Index (Starts at 0)" ]
+				]
+			}, //39
+			//Float Arrays
+			{
+				"Title": "Create FloatArray: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //40
+			{
+				"Title": "Delete FloatArray: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //41
+			//======
+			{
+				"Title": "Set FloatArray %0 [%1] to: %2",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Index (Starts at 0)" ],
+					[ "Float", "Value" ]
+				]
+			}, //42
+			{
+				"Title": "Delete FloatArray %0 [%1]",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Index (Starts at 0)" ]
+				]
+			}, //43
+			//======
+			{
+				"Title": "Sort FloatArray: %0 in Ascending order",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //44
+			{
+				"Title": "Sort FloatArray: %0 in Descending order",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //45
+			//======
+			{
+				"Title": "Loop Through FloatArray: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //46
+			{
+				"Title": "Loop Through FloatArray: %0 in reverse",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //47
+			//======
+			{
+				"Title": "Set FloatArray %0 Loop ID to: %1",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "Loop ID" ]
+				]
+			}, //48
+			//======
+			{
+				"Title": "Parse String %1 into FloatArray: %0 with delimiter %2",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "String" ],
+					[ "String", "Delimiter" ]
+				]
+			}, //49
+			//======
+			{
+				"Title": "Resume FloatArray Loop: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //50
+			{
+				"Title": "Stop FloatArray Loop: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //51
+			{
+				"Title": "Set FloatArray Loop %0 index to: %1",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Loop Index (Starts at 0)" ]
+				]
+			}, //52
+			//String Arrays
+			{
+				"Title": "Create String Array: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //53
+			{
+				"Title": "Delete String Array: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //54
+			//======
+			{
+				"Title": "Set StringArray %0 [%1] to: %2",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Index (Starts at 0)" ],
+					[ "String", "Value" ]
+				]
+			}, //55
+			{
+				"Title": "Delete StringArray %0 [%1]",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Index (Starts at 0)" ]
+				]
+			}, //56
+			//======
+			{
+				"Title": "Sort StringArray: %0 by string length in Ascending order",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //57
+			{
+				"Title": "Sort StringArray: %0 by string length in Descending order",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //58
+			{
+				"Title": "Sort StringArray: %0 by alphabetical order in Ascending order",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //59
+			{
+				"Title": "Sort StringArray: %0 by alphabetical order in Descending order",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //60
+			//======
+			{
+				"Title": "Loop Through StringArray: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //61
+			{
+				"Title": "Loop Through StringArray: %0 in reverse",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //62
+			//======
+			{
+				"Title": "Set StringArray %0 Loop ID to: %1",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "Loop ID" ]
+				]
+			}, //63
+			//======
+			{
+				"Title": "Parse String %1 into StringArray: %0 with delimiter %2",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "String" ],
+					[ "String", "Delimiter" ]
+				]
+			}, //64
+			//======
+			{
+				"Title": "Resume StringArray Loop: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //65
+			{
+				"Title": "Stop StringArray Loop: %0",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //66
+			{
+				"Title": "Set StringArray Loop %0 index to: %1",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Loop Index (Starts at 0)" ]
+				]
+			}, //67
+			//=============================================
+			//Vector2
+			{
+				"Title": "Set 2D Vector: %0 (%1, %2)",
+				"Parameters": [
+					[ "String", "Vector ID" ],
+					[ "Float", "X Value" ],
+					[ "Float", "Y Value" ]
+				]
+			}, //68
+			{
+				"Title": "Delete 2D Vector: %0",
+				"Parameters": [
+					[ "String", "Vector ID" ]
+				]
+			}, //69
+			//======
+			{
+				"Title": "Set X of Vector2(%0) to: %1",
+				"Parameters": [
+					[ "String", "Vector ID" ],
+					[ "Float", "Value" ]
+				]
+			}, //70
+			{
+				"Title": "Set Y of Vector2(%0) to: %1",
+				"Parameters": [
+					[ "String", "Vector ID" ],
+					[ "Float", "Value" ]
+				]
+			}, //71
+			//======
+			{
+				"Title": "Set Vector2(%2) to Vector2(%0) x %1",
+				"Parameters": [
+					[ "String", "Vector ID" ],
+					[ "Float", "Scalar" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //72
+			{
+				"Title": "Set Vector2(%1) to the Unit of Vector2(%0)",
+				"Parameters": [
+					[ "String", "Vector ID" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //73
+			{
+				"Title": "Set Vector2(%2) to Vector2(%0) + Vector2(%1)",
+				"Parameters": [
+					[ "String", "Vector ID 1" ],
+					[ "String", "Vector ID 2" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //74
+			{
+				"Title": "Set Vector2(%2) to Vector2(%0) - Vector2(%1)",
+				"Parameters": [
+					[ "String", "Vector ID 1" ],
+					[ "String", "Vector ID 2" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //75
+			{
+				"Title": "Set Vector2(%2) to Vector2(%0) * Vector2(%1)",
+				"Parameters": [
+					[ "String", "Vector ID 1" ],
+					[ "String", "Vector ID 2" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //76
+			{
+				"Title": "Set Vector2(%2) to Vector2(%0) / Vector2(%1)",
+				"Parameters": [
+					[ "String", "Vector ID 1" ],
+					[ "String", "Vector ID 2" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //77
+			{
+				"Title": "Set Vector2(%3) to Lerp( Vector2(%0), Vector2(%1), %2 )",
+				"Parameters": [
+					[ "String", "Vector ID 1" ],
+					[ "String", "Vector ID 2" ],
+					[ "Float", "Lerp Amount" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //78
+			//Vector3
+			{
+				"Title": "Set 3D Vector: %0 (%1, %2, %3)",
+				"Parameters": [
+					[ "String", "Vector ID" ],
+					[ "Float", "X Value" ],
+					[ "Float", "Y Value" ],
+					[ "Float", "Z Value" ]
+				]
+			}, //79
+			{
+				"Title": "Delete 3D Vector: %0",
+				"Parameters": [
+					[ "String", "Vector ID" ]
+				]
+			}, //80
+			//======
+			{
+				"Title": "Set X of Vector3(%0) to: %1",
+				"Parameters": [
+					[ "String", "Vector ID" ],
+					[ "Float", "Value" ]
+				]
+			}, //81
+			{
+				"Title": "Set Y of Vector3(%0) to: %1",
+				"Parameters": [
+					[ "String", "Vector ID" ],
+					[ "Float", "Value" ]
+				]
+			}, //82
+			{
+				"Title": "Set Z of Vector3(%0) to: %1",
+				"Parameters": [
+					[ "String", "Vector ID" ],
+					[ "Float", "Value" ]
+				]
+			}, //83
+			//======
+			{
+				"Title": "Set Vector3(%2) to Vector3(%0) x %1",
+				"Parameters": [
+					[ "String", "Vector ID" ],
+					[ "Float", "Scalar" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //84
+			{
+				"Title": "Set Vector3(%1) to the Unit of Vector3(%0)",
+				"Parameters": [
+					[ "String", "Vector ID" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //85
+			{
+				"Title": "Set Vector3(%2) to Vector3(%0) + Vector3(%1)",
+				"Parameters": [
+					[ "String", "Vector ID 1" ],
+					[ "String", "Vector ID 2" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //86
+			{
+				"Title": "Set Vector3(%2) to Vector3(%0) - Vector3(%1)",
+				"Parameters": [
+					[ "String", "Vector ID 1" ],
+					[ "String", "Vector ID 2" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //87
+			{
+				"Title": "Set Vector3(%2) to Vector3(%0) * Vector3(%1)",
+				"Parameters": [
+					[ "String", "Vector ID 1" ],
+					[ "String", "Vector ID 2" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //88
+			{
+				"Title": "Set Vector3(%2) to Vector3(%0) / Vector3(%1)",
+				"Parameters": [
+					[ "String", "Vector ID 1" ],
+					[ "String", "Vector ID 2" ],
+					[ "String", "New Vector ID" ]
+				]
+			}, //89
+			{
+				"Title": "Set Vector3(%3) to Lerp( Vector3(%0), Vector3(%1), %2 )",
+				"Parameters": [
+					[ "String", "Vector ID 1" ],
+					[ "String", "Vector ID 2" ],
+					[ "Float", "Lerp Amount" ],
+					[ "String", "New Vector ID" ]
+				]
+			} //90
+			//=============================================
+		],
+		//====================================================================================================================================================================
+		//CONDITIONS
+		//====================================================================================================================================================================
+		"Conditions": [
+			//=============================================
+			//DeltaTime/Ticks
+			{
+				"Title": "%o : On Tick",
+				"Triggered": true,
+				"Parameters": [
+				]
+			}, //0
+			{
+				"Title": "%o : Is Game Speed Paused",
+				"Triggered": false,
+				"Parameters": [
+				]
+			}, //1
+			{
+				"Title": "%o : On Game Speed Paused",
+				"Triggered": true,
+				"Parameters": [
+				]
+			}, //2
+			{
+				"Title": "%o : On Game Speed Resumed",
+				"Triggered": true,
+				"Parameters": [
+				]
+			}, //3
+			{
+				"Title": "%o : On Game Speed Changed",
+				"Triggered": true,
+				"Parameters": [
+				]
+			}, //4
+			//=============================================
+			//Functions
+			{
+				"Title": "%o : On Function %0",
+				"Triggered": true,
+				"Parameters": [
+					[ "String", "Function ID" ]
+				]
+			}, //5
+			//Functions
+			{
+				"Title": "%o : Function %0 Index = %1",
+				"Triggered": false,
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "Integer", "Loop Index (Starts at 0)" ]
+				]
+			}, //6
+			//=============================================
+			//Integer Arrays
+			{
+				"Title": "%o : On IntArray Loop %0",
+				"Triggered": true,
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //7
+			{
+				"Title": "%o : IntArray %0 LoopID = %1",
+				"Triggered": true,
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "Loop ID" ]
+				]
+			}, //8
+			{
+				"Title": "%o : IntArray %0 Index = %1",
+				"Triggered": false,
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Loop Index (Starts at 0)" ]
+				]
+			}, //9
+			{
+				"Title": "%o : IntArray %0 [Index] = %1",
+				"Triggered": false,
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Value" ]
+				]
+			}, //10
+			{
+				"Title": "%o : %1 exists in IntArray %0",
+				"Triggered": false,
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Value" ]
+				]
+			}, //11
+			//Float Arrays
+			{
+				"Title": "%o : On FloatArray Loop %0",
+				"Triggered": true,
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //12
+			{
+				"Title": "%o : FloatArray %0 LoopID = %1",
+				"Triggered": true,
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "Loop ID" ]
+				]
+			}, //13
+			{
+				"Title": "%o : FloatArray %0 Index = %1",
+				"Triggered": false,
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Loop Index (Starts at 0)" ]
+				]
+			}, //14
+			{
+				"Title": "%o : FloatArray %0 [Index] = %1",
+				"Triggered": false,
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Float", "Value" ]
+				]
+			}, //15
+			{
+				"Title": "%o : %1 exists in FloatArray %0",
+				"Triggered": false,
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Float", "Value" ]
+				]
+			}, //16
+			//String Arrays
+			{
+				"Title": "%o : On StringArray Loop %0",
+				"Triggered": true,
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //17
+			{
+				"Title": "%o : StringArray %0 LoopID = %1",
+				"Triggered": true,
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "Loop ID" ]
+				]
+			}, //18
+			{
+				"Title": "%o : StringArray %0 Index = %1",
+				"Triggered": false,
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Loop Index (Starts at 0)" ]
+				]
+			}, //19
+			{
+				"Title": "%o : StringArray %0 [Index] = %1",
+				"Triggered": false,
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "Value" ]
+				]
+			}, //20
+			{
+				"Title": "%o : %1 exists in StringArray %0",
+				"Triggered": false,
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "Value" ]
+				]
+			}, //21
+			//=============================================
+			//Runtime
+			{
+				"Title": "%o : is Running in Editor",
+				"Triggered": false,
+				"Parameters": [
+				]
+			}, //22
+			{
+				"Title": "%o : is Running in Sub-Application",
+				"Triggered": false,
+				"Parameters": [
+				]
+			} //23
+			//=============================================
+		],
+		//====================================================================================================================================================================
+		//EXPRESSIONS
+		//====================================================================================================================================================================
+		"Expressions": [
+			//=============================================
+			//Constants
+			{
+				"Title": "a_e(",
+				"Returns": "Float",
+				"Parameters": [
+				]
+			}, //0
+			{
+				"Title": "a_pi(",
+				"Returns": "Float",
+				"Parameters": [
+				]
+			}, //1
+			{
+				"Title": "a_tau(",
+				"Returns": "Float",
+				"Parameters": [
+				]
+			}, //2
+			{
+				"Title": "a_phi(",
+				"Returns": "Float",
+				"Parameters": [
+				]
+			}, //3
+			{
+				"Title": "a_gamma(",
+				"Returns": "Float",
+				"Parameters": [
+				]
+			}, //4
+			{
+				"Title": "a_sqrt2(",
+				"Returns": "Float",
+				"Parameters": [
+				]
+			}, //5
+			{
+				"Title": "a_sqrt3(",
+				"Returns": "Float",
+				"Parameters": [
+				]
+			}, //6
+			//=============================================
+			//Exponents
+			{
+				"Title": "a_Exp(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Power" ]
+				]
+			}, //7
+			{
+				"Title": "a_Exp10(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Power" ]
+				]
+			}, //8
+			{
+				"Title": "a_Exp2(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Power" ]
+				]
+			}, //9
+			{
+				"Title": "a_Pow(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Base" ],
+					[ "Float", "Power" ]
+				]
+			}, //10
+			//Logs
+			{
+				"Title": "a_Ln(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Argument" ]
+				]
+			}, //11
+			{
+				"Title": "a_Log10(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Argument" ]
+				]
+			}, //12
+			{
+				"Title": "a_Log2(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Argument" ]
+				]
+			}, //13
+			{
+				"Title": "a_Log(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Argument" ],
+					[ "Float", "Base" ]
+				]
+			}, //14
+			//=============================================
+			//Roots
+			{
+				"Title": "a_Root2(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value" ]
+				]
+			}, //15
+			{
+				"Title": "a_Root3(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value" ]
+				]
+			}, //16
+			{
+				"Title": "a_RootN(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value" ],
+					[ "Float", "Radical" ]
+				]
+			}, //17
+			{
+				"Title": "a_RootInv(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value" ],
+					[ "Float", "Radical" ]
+				]
+			}, //18
+			//=============================================
+			//Trigonometry
+			//Angles
+			{
+				"Title": "a_ToRadians(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Integer", "Angle" ]
+				]
+			}, //19
+			{
+				"Title": "a_ToDegrees(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Angle" ]
+				]
+			}, //20
+			//Trig Functions
+			{
+				"Title": "a_SinR(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Angle" ]
+				]
+			}, //21
+			{
+				"Title": "a_SinD(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Integer", "Angle" ]
+				]
+			}, //22
+			{
+				"Title": "a_CosR(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Angle" ]
+				]
+			}, //23
+			{
+				"Title": "a_CosD(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Integer", "Angle" ]
+				]
+			}, //24
+			{
+				"Title": "a_TanR(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Angle" ]
+				]
+			}, //25
+			{
+				"Title": "a_TanD(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Integer", "Angle" ]
+				]
+			}, //26
+			//Reciprocal Trig Functions
+			{
+				"Title": "a_CscR(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Angle" ]
+				]
+			}, //27
+			{
+				"Title": "a_CscD(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Integer", "Angle" ]
+				]
+			}, //28
+			{
+				"Title": "a_SecR(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Angle" ]
+				]
+			}, //29
+			{
+				"Title": "a_SecD(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Integer", "Angle" ]
+				]
+			}, //30
+			{
+				"Title": "a_CotR(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Angle" ]
+				]
+			}, //31
+			{
+				"Title": "a_CotD(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Integer", "Angle" ]
+				]
+			}, //32
+			//Hyperbolic Trig Functions
+			{
+				"Title": "a_hSinR(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Angle" ]
+				]
+			}, //33
+			{
+				"Title": "a_hSinD(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Integer", "Angle" ]
+				]
+			}, //34
+			{
+				"Title": "a_hCosR(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Angle" ]
+				]
+			}, //35
+			{
+				"Title": "a_hCosD(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Integer", "Angle" ]
+				]
+			}, //36
+			{
+				"Title": "a_hTanR(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Angle" ]
+				]
+			}, //37
+			{
+				"Title": "a_hTanD(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Integer", "Angle" ]
+				]
+			}, //38
+			//Inverse Trig Functions
+			{
+				"Title": "a_SinInv(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Ratio" ]
+				]
+			}, //39
+			{
+				"Title": "a_CosInv(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Ratio" ]
+				]
+			}, //40
+			{
+				"Title": "a_TanInv(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Ratio" ]
+				]
+			}, //41
+			//Inverse Reciprocal Trig Functions
+			{
+				"Title": "a_CscInv(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Ratio" ]
+				]
+			}, //42
+			{
+				"Title": "a_SecInv(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Ratio" ]
+				]
+			}, //43
+			{
+				"Title": "a_CotInv(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Ratio" ]
+				]
+			}, //44
+			//Inverse Hyperbolic Trig Functions
+			{
+				"Title": "a_hSinInv(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Ratio" ]
+				]
+			}, //45
+			{
+				"Title": "a_hSinInv(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Ratio" ]
+				]
+			}, //46
+			{
+				"Title": "a_hTanInv(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Ratio" ]
+				]
+			}, //47
+			//=============================================
+			//Factorials
+			{
+				"Title": "a_FacI(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Input" ]
+				]
+			}, //48
+			{
+				"Title": "a_FacF(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Input" ]
+				]
+			}, //49
+			//=============================================
+			//Operations
+			//Clamps
+			{
+				"Title": "a_ClampI(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Input" ],
+					[ "Integer", "Min" ],
+					[ "Integer", "Max" ]
+				]
+			}, //50
+			{
+				"Title": "a_ClampF(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Input" ],
+					[ "Float", "Min" ],
+					[ "Float", "Max" ]
+				]
+			}, //51
+			{
+				"Title": "a_MinI(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value A" ],
+					[ "Integer", "Value B" ]
+				]
+			}, //52
+			{
+				"Title": "a_MinF(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ]
+				]
+			}, //53
+			{
+				"Title": "a_MaxI(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value A" ],
+					[ "Integer", "Value B" ]
+				]
+			}, //54
+			{
+				"Title": "a_MaxF(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ]
+				]
+			}, //55
+			//Rounding
+			{
+				"Title": "a_Round(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Float", "Input" ]
+				]
+			}, //56
+			{
+				"Title": "a_RoundTo(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Input" ],
+					[ "Integer", "Decimal" ]
+				]
+			}, //57
+			{
+				"Title": "a_Floor(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Float", "Input" ]
+				]
+			}, //58
+			{
+				"Title": "a_FloorTo(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Input" ],
+					[ "Integer", "Decimal" ]
+				]
+			}, //59
+			{
+				"Title": "a_Ceil(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Float", "Input" ]
+				]
+			}, //60
+			{
+				"Title": "a_CeilTo(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Input" ],
+					[ "Integer", "Decimal" ]
+				]
+			}, //61
+			//Other
+			{
+				"Title": "a_AbsI(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Input" ]
+				]
+			}, //62
+			{
+				"Title": "a_AbsF(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Input" ]
+				]
+			}, //63
+			{
+				"Title": "a_Sign(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Input" ]
+				]
+			}, //64
+			{
+				"Title": "a_ModI(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Input" ],
+					[ "Integer", "Divisor" ]
+				]
+			}, //65
+			{
+				"Title": "a_ModF(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Input" ],
+					[ "Float", "Divisor" ]
+				]
+			}, //66
+			{
+				"Title": "a_DivI(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Input" ],
+					[ "Integer", "Divisor" ]
+				]
+			}, //67
+			{
+				"Title": "a_DivF(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Float", "Input" ],
+					[ "Float", "Divisor" ]
+				]
+			}, //68
+			{
+				"Title": "a_RemI(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value A" ],
+					[ "Integer", "Value B" ]
+				]
+			}, //69
+			{
+				"Title": "a_RemF(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ]
+				]
+			}, //70
+			//=============================================
+			//Comparisons
+			{
+				"Title": "a_IsEqual(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ]
+				]
+			}, //71
+			{
+				"Title": "a_IsDifferent(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ]
+				]
+			}, //72
+			{
+				"Title": "a_IsGreater(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ]
+				]
+			}, //73
+			{
+				"Title": "a_IsGreaterEqual(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ]
+				]
+			}, //74
+			{
+				"Title": "a_IsLess(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ]
+				]
+			}, //75
+			{
+				"Title": "a_IsLessEqual(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ]
+				]
+			}, //76
+			//=============================================
+			//Linear Interpolation
+			{
+				"Title": "a_Lerp(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ]
+				]
+			}, //77
+			{
+				"Title": "a_LerpS(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ],
+					[ "Float", "Delta Time" ]
+				]
+			}, //78
+			{
+				"Title": "a_PointSlope(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "x0" ],
+					[ "Float", "x1" ],
+					[ "Float", "y0" ],
+					[ "Float", "y1" ],
+					[ "Float", "valueT" ]
+				]
+			}, //79
+			//=============================================
+			//Easing
+			{
+				"Title": "a_EasingConstant(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ],
+					[ "Float", "Jump Point" ]
+				]
+			}, //80
+			{
+				"Title": "a_EasingLinear(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ]
+				]
+			}, //81
+			{
+				"Title": "a_EasingQuadratic(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ],
+					[ "String", "Direction" ]
+				]
+			}, //82
+			{
+				"Title": "a_EasingCubic(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ],
+					[ "String", "Direction" ]
+				]
+			}, //83
+			{
+				"Title": "a_EasingQuartic(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ],
+					[ "String", "Direction" ]
+				]
+			}, //84
+			{
+				"Title": "a_EasingPolynomial(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ],
+					[ "String", "Direction" ],
+					[ "Integer", "Exponent" ]
+				]
+			}, //85
+			{
+				"Title": "a_EasingExponential(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ],
+					[ "String", "Direction" ],
+					[ "Float", "Base" ],
+					[ "Float", "Growth" ]
+				]
+			}, //86
+			{
+				"Title": "a_EasingSine(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ],
+					[ "String", "Direction" ]
+				]
+			}, //87
+			{
+				"Title": "a_EasingCircular(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ],
+					[ "String", "Direction" ]
+				]
+			}, //88
+			{
+				"Title": "a_EasingBack(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ],
+					[ "String", "Direction" ],
+					[ "Float", "Overshoot" ]
+				]
+			}, //89
+			{
+				"Title": "a_EasingBounce(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ],
+					[ "String", "Direction" ],
+					[ "Float", "Damping" ],
+					[ "Float", "Frequency" ]
+				]
+			}, //90
+			{
+				"Title": "a_EasingElastic(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Value T" ],
+					[ "String", "Direction" ],
+					[ "Float", "Damping" ],
+					[ "Float", "Frequency" ]
+				]
+			}, //91
+			//=============================================
+			//Kill Timer Equations
+			{
+				"Title": "a_Texp(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "AI min" ],
+					[ "Float", "AI max" ],
+					[ "Float", "High Timer" ],
+					[ "Float", "Low Timer" ],
+					[ "Float", "AI value" ]
+				]
+			}, //92
+			{
+				"Title": "a_Tsqrt(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "AI min" ],
+					[ "Float", "AI max" ],
+					[ "Float", "High Timer" ],
+					[ "Float", "Low Timer" ],
+					[ "Float", "AI value" ]
+				]
+			}, //93
+			//=============================================
+			//Colors
+			{
+				"Title": "a_FromRGB(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "R" ],
+					[ "Integer", "G" ],
+					[ "Integer", "B" ]
+				]
+			}, //94
+			{
+				"Title": "a_FromHSV(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "H" ],
+					[ "Float", "S" ],
+					[ "Float", "V" ]
+				]
+			}, //95
+			{
+				"Title": "a_FromHEX(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Hex$" ]
+				]
+			}, //96
+			//Get RGB
+			{
+				"Title": "a_GetRed(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Color" ]
+				]
+			}, //97
+			{
+				"Title": "a_GetGreen(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Color" ]
+				]
+			}, //98
+			{
+				"Title": "a_GetBlue(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Color" ]
+				]
+			}, //99
+			//Get HSV
+			{
+				"Title": "a_GetHue(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Color" ]
+				]
+			}, //100
+			{
+				"Title": "a_GetSaturation(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Integer", "Color" ]
+				]
+			}, //101
+			{
+				"Title": "a_GetBrightness(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Integer", "Color" ]
+				]
+			}, //102
+			//Get HEX
+			{
+				"Title": "a_GetHEX(",
+				"Returns": "String",
+				"Parameters": [
+					[ "Integer", "Color" ]
+				]
+			}, //103
+			//=============================================
+			//Other
+			{
+				"Title": "a_Erf(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value" ]
+				]
+			}, //104
+			//=============================================
+			//Boolean
+			{
+				"Title": "a_ToBool(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ]
+				]
+			}, //105
+			{
+				"Title": "a_NOT(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ]
+				]
+			}, //106
+			{
+				"Title": "a_AND(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "ValueA" ],
+					[ "Integer", "ValueB" ]
+				]
+			}, //107
+			{
+				"Title": "a_NAND(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "ValueA" ],
+					[ "Integer", "ValueB" ]
+				]
+			}, //108
+			{
+				"Title": "a_OR(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "ValueA" ],
+					[ "Integer", "ValueB" ]
+				]
+			}, //109
+			{
+				"Title": "a_NOR(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "ValueA" ],
+					[ "Integer", "ValueB" ]
+				]
+			}, //110
+			{
+				"Title": "a_XOR(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "ValueA" ],
+					[ "Integer", "ValueB" ]
+				]
+			}, //111
+			{
+				"Title": "a_XNOR(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "ValueA" ],
+					[ "Integer", "ValueB" ]
+				]
+			}, //112
+			{
+				"Title": "a_Implies(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "ValueA" ],
+					[ "Integer", "ValueB" ]
+				]
+			}, //113
+			{
+				"Title": "a_NImplies(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "ValueA" ],
+					[ "Integer", "ValueB" ]
+				]
+			}, //114
+			//=============================================
+			//Bitwise
+			{
+				"Title": "a_BitshiftL(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ],
+					[ "Integer", "Shift Amount" ]
+				]
+			}, //115
+			{
+				"Title": "a_BitshiftR(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ],
+					[ "Integer", "Shift Amount" ]
+				]
+			}, //116
+			{
+				"Title": "a_BitwiseNOT(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ]
+				]
+			}, //117
+			{
+				"Title": "a_BitwiseAND(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ],
+					[ "Integer", "Bitmask" ]
+				]
+			}, //118
+			{
+				"Title": "a_BitwiseNAND(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ],
+					[ "Integer", "Bitmask" ]
+				]
+			}, //119
+			{
+				"Title": "a_BitwiseOR(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ],
+					[ "Integer", "Bitmask" ]
+				]
+			}, //120
+			{
+				"Title": "a_BitwiseNOR(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ],
+					[ "Integer", "Bitmask" ]
+				]
+			}, //121
+			{
+				"Title": "a_BitwiseXOR(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ],
+					[ "Integer", "Bitmask" ]
+				]
+			}, //122
+			{
+				"Title": "a_BitwiseXNOR(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ],
+					[ "Integer", "Bitmask" ]
+				]
+			}, //123
+			{
+				"Title": "a_BitwiseImplies(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ],
+					[ "Integer", "Bitmask" ]
+				]
+			}, //124
+			{
+				"Title": "a_BitwiseNImplies(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ],
+					[ "Integer", "Bitmask" ]
+				]
+			}, //125
+			{
+				"Title": "a_TwosComplement(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ]
+				]
+			}, //126
+			//=============================================
+			//Time
+			{
+				"Title": "a_TimeHours(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //127
+			{
+				"Title": "a_TimeMinutes(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //128
+			{
+				"Title": "a_TimeSeconds(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //129
+			{
+				"Title": "a_TimeMilliseconds(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //130
+			{
+				"Title": "a_TimeHours$(",
+				"Returns": "String",
+				"Parameters": [
+				]
+			}, //131
+			{
+				"Title": "a_TimeMinutes$(",
+				"Returns": "String",
+				"Parameters": [
+				]
+			}, //132
+			{
+				"Title": "a_TimeSeconds$(",
+				"Returns": "String",
+				"Parameters": [
+				]
+			}, //133
+			{
+				"Title": "a_TimeMilliseconds$(",
+				"Returns": "String",
+				"Parameters": [
+				]
+			}, //134
+			{
+				"Title": "a_TimeString$(",
+				"Returns": "String",
+				"Parameters": [
+				]
+			}, //135
+			{
+				"Title": "a_CurrentMonth(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //136
+			{
+				"Title": "a_CurrentDay(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //137
+			{
+				"Title": "a_CurrentYear(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //138
+			{
+				"Title": "a_CurrentDate$(",
+				"Returns": "String",
+				"Parameters": [
+				]
+			}, //139
+			{
+				"Title": "a_CurrentHours(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //140
+			{
+				"Title": "a_CurrentMinutes(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //141
+			{
+				"Title": "a_CurrentSeconds(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //142
+			{
+				"Title": "a_CurrentTime$(",
+				"Returns": "String",
+				"Parameters": [
+				]
+			}, //143
+			//=============================================
+			//Randomization
+			{
+				"Title": "a_Random0(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ]
+				]
+			}, //144
+			{
+				"Title": "a_Random1(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "Value" ]
+				]
+			}, //145
+			{
+				"Title": "a_RRandomI(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "Integer", "ValueA" ],
+					[ "Integer", "ValueB" ]
+				]
+			}, //146
+			{
+				"Title": "a_RRandomF(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "ValueA" ],
+					[ "Float", "ValueB" ]
+				]
+			}, //147
+			{
+				"Title": "a_RandomizerIndex(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Randomizer ID" ],
+					[ "Integer", "Index" ]
+				]
+			}, //148
+			{
+				"Title": "a_RandomizerValue(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Randomizer ID" ]
+				]
+			}, //149
+			//=============================================
+			//Delta Time/Ticks
+			{
+				"Title": "a_DT(",
+				"Returns": "Float",
+				"Parameters": [
+				]
+			}, //150
+			{
+				"Title": "a_DTsec(",
+				"Returns": "Float",
+				"Parameters": [
+				]
+			}, //151
+			{
+				"Title": "a_GameSpeed(",
+				"Returns": "Float",
+				"Parameters": [
+				]
+			}, //152
+			{
+				"Title": "a_DTbase(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //153
+			{
+				"Title": "a_TickRate(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //154
+			{
+				"Title": "a_OldTimer(",
+				"Returns": "Integer",
+				"Parameters": [
+				]
+			}, //155
+			//=============================================
+			//Functions
+			{
+				"Title": "a_FunctionIntParam(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "String", "Parameter ID" ]
+				]
+			}, //156
+			{
+				"Title": "a_FunctionFloatParam(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "String", "Parameter ID" ]
+				]
+			}, //157
+			{
+				"Title": "a_FunctionStringParam(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Function ID" ],
+					[ "String", "Parameter ID" ]
+				]
+			}, //158
+			{
+				"Title": "a_FunctionIntReturn(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Function ID" ]
+				]
+			}, //159
+			{
+				"Title": "a_FunctionFloatReturn(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Function ID" ]
+				]
+			}, //160
+			{
+				"Title": "a_FunctionStringReturn(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Function ID" ]
+				]
+			}, //161
+			{
+				"Title": "a_LoopIndex(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Function ID" ]
+				]
+			}, //162
+			{
+				"Title": "a_Param(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "ID" ],
+					[ "String", "Type" ],
+					[ "String", "Value" ]
+				]
+			}, //163
+			//=============================================
+			//Int Arrays
+			{
+				"Title": "a_IntArrValue(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Index" ]
+				]
+			}, //164
+			{
+				"Title": "a_IntArrLoopIndex(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //165
+			{
+				"Title": "a_IntArrLoopValue(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //166
+			{
+				"Title": "a_IntArrSize(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //167
+			{
+				"Title": "a_IntArrLoopID(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //168
+			{
+				"Title": "a_PrintIntArr(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //169
+			//Float Arrays
+			{
+				"Title": "a_FloatArrValue(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Index" ]
+				]
+			}, //170
+			{
+				"Title": "a_FloatArrLoopIndex(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //171
+			{
+				"Title": "a_FloatArrLoopValue(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //172
+			{
+				"Title": "a_FloatArrSize(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //173
+			{
+				"Title": "a_FloatArrLoopID(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //174
+			{
+				"Title": "a_PrintFloatArr(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //175
+			//String Arrays
+			{
+				"Title": "a_StringArrayValue$(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "Integer", "Index" ]
+				]
+			}, //176
+			{
+				"Title": "a_StringArrayIndex(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //177
+			{
+				"Title": "a_StringArrayLoopValue$(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //178
+			{
+				"Title": "a_StringArraySize(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //179
+			{
+				"Title": "a_StringArrLoopID(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //180
+			{
+				"Title": "a_PrintStringArr(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Array ID" ]
+				]
+			}, //181
+			//=============================================
+			//Vector2
+			{
+				"Title": "a_Vect2(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Vector2 ID" ],
+					[ "String", "Dimension" ]
+				]
+			}, //182
+			{
+				"Title": "a_Vect2x(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Vector2 ID" ]
+				]
+			}, //183
+			{
+				"Title": "a_Vect2y(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Vector2 ID" ]
+				]
+			}, //184
+			{
+				"Title": "a_Vect2m(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Vector2 ID" ]
+				]
+			}, //185
+			{
+				"Title": "a_Vect2dot(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Vector2 ID 1" ],
+					[ "String", "Vector2 ID 2" ]
+				]
+			}, //186
+			//Vector3
+			{
+				"Title": "a_Vect3(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Vector3 ID" ],
+					[ "String", "Dimension" ]
+				]
+			}, //187
+			{
+				"Title": "a_Vect3x(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Vector3 ID" ]
+				]
+			}, //188
+			{
+				"Title": "a_Vect3y(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Vector3 ID" ]
+				]
+			}, //189
+			{
+				"Title": "a_Vect3z(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Vector3 ID" ]
+				]
+			}, //190
+			{
+				"Title": "a_Vect3m(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Vector3 ID" ]
+				]
+			}, //191
+			{
+				"Title": "a_Vect3dot(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Vector3 ID 1" ],
+					[ "String", "Vector3 ID 2" ]
+				]
+			} //192
+		],
+		"Properties": [
+			{
+				"Title": "Global Data (Disabled on the free version)",
+				"Info": "Allows internal data to remain in memory when switching Frames.",
+				"EnableIf":  "false",
+				"Type": "Checkbox",
+				"DefaultState": false,
+				"Bold": true
+			} //0
+		]
+	}
+}
