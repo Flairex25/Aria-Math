@@ -319,8 +319,15 @@ int Math::NOT(int input) {
 //Randomization
 //================================================================================================================
 int	currentTimer = 0;
+int randomSeed = 0;
+
+void Math::SetRandomSeed(int value) {
+	randomSeed = value;
+	srand(value);
+};
 
 void Math::SetSeed() {
+	if (randomSeed != 0) { return; }
 	if ((time(NULL) - currentTimer) > MAX_TIMER_DIFFERENCE) {
 		currentTimer = time(NULL);
 		srand(currentTimer);

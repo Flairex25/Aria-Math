@@ -86,6 +86,7 @@ namespace Math {
 	int NOT(int input);
 	//Randomization
 	void SetSeed();
+	void SetRandomSeed(int randomSeed);
 	int RRandomI(int valueA, int valueB);
 	float RRandomF(float valueA, float valueB);
 }

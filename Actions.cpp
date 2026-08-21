@@ -9,6 +9,10 @@ void Extension::aFormatTimeString(int timeValue) { AriaTime::FormatTime(timeValu
 //=======================================================================================================================================================================================================
 //Randomization
 
+void Extension::aSetRandomSeed(int randomSeed) {
+	Math::SetRandomSeed(randomSeed);
+}
+//=====================================================
 void Extension::aCreateBagRandomizer(const TCHAR* ID) {
 	BagRandomization::AddToArray(ID);
 }

@@ -134,6 +134,8 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr, const 
 	LinkAction(88, aMultiplyVector3);
 	LinkAction(89, aDivideVector3);
 	LinkAction(90, aLerpVector3);
+	//Randomization
+	LinkAction(91, aSetRandomSeed);
 	//=======================================================================================================================================================================================================
 	//Conditions
 	//===================

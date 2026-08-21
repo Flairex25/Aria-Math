@@ -27,6 +27,8 @@
 			//Randomization
 			[
 				"Randomization",
+				[ 91, "Set Random Seed" ],
+				"---",
 				[ 1, "Create Bag Randomizer" ],
 				[ 2, "Reset Bag Randomizer" ],
 				[ 3, "Delete Bag Randomizer" ],
@@ -1305,8 +1307,15 @@
 					[ "Float", "Lerp Amount" ],
 					[ "String", "New Vector ID" ]
 				]
-			} //90
+			}, //90
 			//=============================================
+			//Randomization
+			{
+				"Title": "Set Random Seed to: %0",
+				"Parameters": [
+					[ "Integer", "Random Seed (0 = random)" ]
+				]
+			} //91
 		],
 		//====================================================================================================================================================================
 		//CONDITIONS
