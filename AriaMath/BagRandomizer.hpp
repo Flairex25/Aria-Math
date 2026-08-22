@@ -76,6 +76,11 @@ public:
 		}
 		return;
 	}
+	//Clear Randomizer
+	void Clear() {
+		std::vector<int>().swap(this->bagArray);
+		std::vector<int>().swap(this->bufferArray);
+	}
 };
 //==========================================================================================================
 namespace BagRandomization {
@@ -83,5 +88,7 @@ namespace BagRandomization {
 	BagRandomizer* GetFromArray(const TCHAR* ID);
 	void RemoveFromArray(const TCHAR* ID);
 	void Delete();
-}
+	std::vector<BagRandomizer> Get();
+	void Set(std::vector<BagRandomizer> newList);
+};
 //==========================================================================================================
