@@ -21,3 +21,9 @@ If you instead want to purchase the extension, you can find it on my Ko-Fi page 
 
 (Note: You must have Visual Studio along with the proper development kits installed for the solution to be able to build.)
 (Make sure you build the `Edittime`, `Edittime Unicode`, `Runtime` and `Runtime Unicode` builds. Once built, you can find them inside `"Aria Math\MFX"`.)
+
+## If your build doesn't work
+
+- Make sure you have everything you need for Visual Studio. This includes the latest version of the Windows SDK.
+- Make sure your directory inside the extension manager is correct and that the folder is named `"Aria Math"`.
+- If you are still getting errors, try replacing the `Inc` and `Lib` folders with the ones found in `Extra-Repo-Items`.
