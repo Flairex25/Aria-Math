@@ -26,4 +26,4 @@ If you instead want to purchase the extension, you can find it on my Ko-Fi page 
 
 - Make sure you have everything you need for Visual Studio. This includes the latest version of the Windows SDK.
 - Make sure your directory inside the extension manager is correct and that the folder is named `"Aria Math"`.
-- If you are still getting errors, try replacing the `Inc` and `Lib` folders with the ones found in `Extra-Repo-Items`.
+- If you are still getting errors, try replacing the `Inc` and `Lib` folders inside the `DarkEdif` folder with the ones found in `Extra-Repo-Items`.
