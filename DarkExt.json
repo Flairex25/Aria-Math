@@ -3017,11 +3017,12 @@
 		],
 		"Properties": [
 			{
-				"Title": "Global Data",
+				"Title": "Enable Global Data",
 				"Info": "Allows internal data to remain in memory when switching Frames.",
+				"ShowIf": "false",
 				"EnableIf": "true",
 				"Type": "Checkbox",
-				"DefaultState": true,
+				"DefaultState": false,
 				"Bold": true
 			} //0
 		]
