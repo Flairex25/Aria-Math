@@ -40,5 +40,7 @@ namespace TwoDVectors {
 	Vector2* GetFromArray(const TCHAR* ID);
 	void RemoveFromArray(const TCHAR* ID);
 	void Delete();
+	std::vector<Vector2> Get();
+	void Set(std::vector<Vector2> newList);
 }
 //==========================================================================================================
