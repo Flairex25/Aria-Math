@@ -32,7 +32,7 @@ public:
 	Edif::Runtime Runtime;
 
 	static const int MinimumBuild = 254;
-	static const int Version = 2;
+	static const int Version = 3;
 
 	// Warning: OEFLAGS/OEPREFS cannot be freely modified when you have used them in MFAs.
 	static constexpr OEFLAGS OEFLAGS = OEFLAGS::NONE;
@@ -484,6 +484,21 @@ public:
 	float eVect3z(const TCHAR* ID);
 	float eVect3M(const TCHAR* ID);
 	float eVect3Dot(const TCHAR* ID1, const TCHAR* ID2);
+	//=======================================================================================================================================================================================================
+	//Global Data
+	//Struct to store all global data elements
+	struct GlobalData final
+	{
+		std::vector<BagRandomizer> bagRandomizerList;
+		std::vector<Vector2> vector2list;
+		std::vector<Vector3> vector3list;
+		std::vector<AriaFunction> functionList;
+		std::vector<IntArray> intArrayList;
+		std::vector<FloatArray> floatArrayList;
+		std::vector<StringArray> stringArrayList;
+	};
+	//GlobalData struct pointer
+	GlobalData* globals;
 	//=======================================================================================================================================================================================================
 
 	// Runs every tick of Fusion's runtime, can be toggled off and back on
