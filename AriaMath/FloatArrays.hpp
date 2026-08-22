@@ -68,5 +68,7 @@ namespace FloatArrays {
 	FloatArray* GetFromArray(const TCHAR* ID);
 	void RemoveFromArray(const TCHAR* ID);
 	void Delete();
-}
+	std::vector<FloatArray> Get();
+	void Set(std::vector<FloatArray> newList);
+};
 //==========================================================================================================
