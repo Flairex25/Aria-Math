@@ -47,5 +47,7 @@ namespace ThreeDVectors {
 	Vector3* GetFromArray(const TCHAR* ID);
 	void RemoveFromArray(const TCHAR* ID);
 	void Delete();
+	std::vector<Vector3> Get();
+	void Set(std::vector<Vector3> newList);
 }
 //==========================================================================================================
