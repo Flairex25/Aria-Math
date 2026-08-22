@@ -164,14 +164,14 @@ public:
 		for (int i = 0; i < this->stringParams.size(); i++) {
 			StringParameter* currentParam = &this->stringParams[i];
 			if (_tcscmp(ID, currentParam->GetID()) == 0) {
-				currentParam->SetValue(value);
+				currentParam->SetValue(_tcsdup(value));
 				return;
 			}
 		}
 		this->stringParams.emplace_back();
 		StringParameter* newParam = &this->stringParams.back();
 		newParam->SetID(ID);
-		newParam->SetValue(value);
+		newParam->SetValue(_tcsdup(value));
 	}
 	//Delete Params
 	void DeleteIntParam(const TCHAR* ID) {
@@ -199,12 +199,18 @@ public:
 		for (int i = 0; i < this->stringParams.size(); i++) {
 			StringParameter* currentParam = &this->stringParams[i];
 			if (_tcscmp(ID, currentParam->GetID()) == 0) {
+				free((void*)currentParam->GetValue());
 				this->stringParams.erase(this->stringParams.begin() + i);
 				return;
 			}
 		}
 	}
 	void DeleteAllParams() {
+
+		for (StringParameter currentParam : this->stringParams) {
+			free((void*)currentParam.GetValue());
+		}
+
 		std::vector<IntParameter>().swap(this->intParams);
 		std::vector<FloatParameter>().swap(this->floatParams);
 		std::vector<StringParameter>().swap(this->stringParams);
@@ -216,5 +222,7 @@ namespace Functions {
 	AriaFunction* GetFromArray(const TCHAR* ID);
 	void RemoveFromArray(const TCHAR* ID);
 	void Delete();
+	std::vector<AriaFunction> Get();
+	void Set(std::vector<AriaFunction> newList);
 }
 //==========================================================================================================
