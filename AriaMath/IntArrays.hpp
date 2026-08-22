@@ -68,5 +68,7 @@ namespace IntegerArrays {
 	IntArray* GetFromArray(const TCHAR* ID);
 	void RemoveFromArray(const TCHAR* ID);
 	void Delete();
-}
+	std::vector<IntArray> Get();
+	void Set(std::vector<IntArray> newList);
+};
 //==========================================================================================================
