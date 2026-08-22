@@ -61,6 +61,12 @@ public:
 	void SetIsReverse(bool isReverse) {
 		this->isReverse = isReverse;
 	}
+	//Destructor
+	~StringArray() {
+		for (const TCHAR* str : this->GetArray()) {
+			free((void*)str);
+		}
+	}
 };
 //==========================================================================================================
 namespace StringArrays {
@@ -68,5 +74,7 @@ namespace StringArrays {
 	StringArray* GetFromArray(const TCHAR* ID);
 	void RemoveFromArray(const TCHAR* ID);
 	void Delete();
-}
+	std::vector<StringArray> Get();
+	void Set(std::vector<StringArray> newList);
+};
 //==========================================================================================================
