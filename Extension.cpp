@@ -2,7 +2,8 @@
 #include <iomanip>
 using namespace std::chrono_literals;
 
-bool dontDeleteData = false;
+std::tstring globalKey = _T("AriaMath"s);
+bool keepData = false;
 ///
 /// EXTENSION CONSTRUCTOR/DESTRUCTOR
 ///
@@ -453,12 +454,43 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr, const 
 	// Read object DarkEdif properties; you can pass property name, or property index
 	// This will work on all platforms the same way.
 	// See edPtr->Props functions.
-	bool checkboxGlobalData = edPtr->Props.IsPropChecked("Global Data"sv);
+	bool checkboxGlobalData = edPtr->Props.IsPropChecked("Enable Global Data"sv);
 
-	dontDeleteData = checkboxGlobalData;
+	//Setup globals
+	keepData = checkboxGlobalData;
+	//Setup ext instance vector for globals
+	GlobalData* globalPtr = NULL;
+	//Read Global Data
+	globalPtr = (GlobalData*)Runtime.ReadGlobal((_T("AriaMath"s)).c_str());
+	//Create new Global Data if it doesn't exist
+	if (globalPtr == NULL && checkboxGlobalData == true) {
+		globals = new GlobalData();
+		globals->bagRandomizerList = BagRandomization::Get();
+		globals->vector2list = TwoDVectors::Get();
+		globals->vector3list = ThreeDVectors::Get();
+		globals->functionList = Functions::Get();
+		globals->intArrayList = IntegerArrays::Get();
+		globals->floatArrayList = FloatArrays::Get();
+		globals->stringArrayList = StringArrays::Get();
+		Runtime.WriteGlobal(globalKey.c_str(), globals);
+	}
+	else {
+		globals = globalPtr;
+	}
+	if (checkboxGlobalData == true) {
+		BagRandomization::Set(globals->bagRandomizerList);
+		TwoDVectors::Set(globals->vector2list);
+		ThreeDVectors::Set(globals->vector3list);
+		Functions::Set(globals->functionList);
+		IntegerArrays::Set(globals->intArrayList);
+		FloatArrays::Set(globals->floatArrayList);
+		StringArrays::Set(globals->stringArrayList);
+	}
+
 
 	// These lines do nothing, but prevent the compiler warning the variables are unused
-	(void)checkboxGlobalData;
+	//(void)checkboxGlobalData;
+	//(void)checkboxGlobalData;
 
 #if TEXT_OEFLAG_EXTENSION
 	// Copy from edittime data into runtime data
@@ -479,14 +511,25 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr, const 
 
 Extension::~Extension()
 {
-	if (!dontDeleteData) {
+	//Write GlobalData
+	if (keepData) {
+		globals->bagRandomizerList = BagRandomization::Get();
+		globals->vector2list = TwoDVectors::Get();
+		globals->vector3list = ThreeDVectors::Get();
+		globals->functionList = Functions::Get();
+		globals->intArrayList = IntegerArrays::Get();
+		globals->floatArrayList = FloatArrays::Get();
+		globals->stringArrayList = StringArrays::Get();
+		Runtime.WriteGlobal(globalKey.c_str(), globals);
+	}
+	else {
 		BagRandomization::Delete();
+		TwoDVectors::Delete();
+		ThreeDVectors::Delete();
 		Functions::Delete();
 		IntegerArrays::Delete();
 		FloatArrays::Delete();
 		StringArrays::Delete();
-		TwoDVectors::Delete();
-		ThreeDVectors::Delete();
 	}
 }
 
