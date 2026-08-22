@@ -35,6 +35,7 @@ void FloatArrays::AddToArray(const TCHAR* ID) {
 FloatArray* FloatArrays::GetFromArray(const TCHAR* ID) {
 	//Check if ID is an empty ID
 	if (_tcscmp(ID, _T("")) == 0) {
+		emptyArr.SetArray(std::vector<float>());
 		return &emptyArr;
 	}
 
@@ -47,6 +48,7 @@ FloatArray* FloatArrays::GetFromArray(const TCHAR* ID) {
 		}
 	}
 
+	emptyArr.SetArray(std::vector<float>());
 	return &emptyArr;
 }
 //==========================================================================================================
@@ -68,5 +70,13 @@ void FloatArrays::RemoveFromArray(const TCHAR* ID) {
 //==========================================================================================================
 void FloatArrays::Delete() {
 	std::vector<FloatArray>().swap(arrArray);
+}
+//==========================================================================================================
+std::vector<FloatArray> FloatArrays::Get() {
+	return arrArray;
+}
+//==========================================================================================================
+void FloatArrays::Set(std::vector<FloatArray> newList) {
+	newList.swap(arrArray);
 }
 //==========================================================================================================
