@@ -39,11 +39,15 @@ bool Extension::cFunctionLoopIndexEquals(const TCHAR* functionID, int loopIndex)
 //Integer Arrays
 
 bool Extension::cOnIntegerArrayLoop(const TCHAR* arrayID) {
+	if (!arrayID || !*arrayID) { return false; }
+	if (!currentIntArrayLoopID || !*currentIntArrayLoopID) { return false; }
 	return (_tcscmp(arrayID, currentIntArrayLoopID) == 0);
 }
 
 bool Extension::cIntegerArrayLoopIDEquals(const TCHAR* arrayID, const TCHAR* loopID) {
 	const TCHAR* currentLoopID = IntegerArrays::GetFromArray(arrayID)->GetLoopID();
+	if (!currentLoopID || !*currentLoopID) { return false; }
+	if (!loopID || !*loopID) { return false; }
 	return (_tcscmp(currentLoopID, loopID) == 0);
 }
 
@@ -72,11 +76,15 @@ bool Extension::cValueExistsInIntegerArray(const TCHAR* arrayID, int value) {
 //Float Arrays
 
 bool Extension::cOnFloatArrayLoop(const TCHAR* arrayID) {
+	if (!arrayID || !*arrayID) { return false; }
+	if (!currentFloatArrayLoopID || !*currentFloatArrayLoopID) { return false; }
 	return (_tcscmp(arrayID, currentFloatArrayLoopID) == 0);
 }
 
 bool Extension::cFloatArrayLoopIDEquals(const TCHAR* arrayID, const TCHAR* loopID) {
 	const TCHAR* currentLoopID = FloatArrays::GetFromArray(arrayID)->GetLoopID();
+	if (!currentLoopID || !*currentLoopID) { return false; }
+	if (!loopID || !*loopID) { return false; }
 	return (_tcscmp(currentLoopID, loopID) == 0);
 }
 
@@ -105,11 +113,15 @@ bool Extension::cValueExistsInFloatArray(const TCHAR* arrayID, float value) {
 //String Array
 
 bool Extension::cOnStringArrayLoop(const TCHAR* arrayID) {
+	if (!arrayID || !*arrayID) { return false; }
+	if (!currentStringArrayLoopID || !*currentStringArrayLoopID) { return false; }
 	return (_tcscmp(arrayID, currentStringArrayLoopID) == 0);
 }
 
 bool Extension::cStringArrayLoopIDEquals(const TCHAR* arrayID, const TCHAR* loopID) {
 	const TCHAR* currentLoopID = StringArrays::GetFromArray(arrayID)->GetLoopID();
+	if (!currentLoopID || !*currentLoopID) { return false; }
+	if (!loopID || !*loopID) { return false; }
 	return (_tcscmp(currentLoopID, loopID) == 0);
 }
 
