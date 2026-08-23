@@ -486,6 +486,17 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr, const 
 		FloatArrays::Set(globals->floatArrayList);
 		StringArrays::Set(globals->stringArrayList);
 	}
+	//This runs every time a new ext instance is loaded
+	//Delete all data
+	BagRandomization::Delete();
+	TwoDVectors::Delete();
+	ThreeDVectors::Delete();
+	Functions::Delete();
+	IntegerArrays::Delete();
+	FloatArrays::Delete();
+	StringArrays::Delete();
+	Math::SetupRNG();
+	LOGI(_T("Extension Instance Created"));
 
 
 	// These lines do nothing, but prevent the compiler warning the variables are unused
