@@ -229,7 +229,7 @@
 			[
 				"Integer Arrays",
 				[ 7, "On Array Loop" ],
-				[ 8, "Array Loop ID Equals" ],
+				//[ 8, "Array Loop ID Equals" ],
 				"---",
 				[ 9, "Current Index Equals" ],
 				[ 10, "Current Value Equals" ],
@@ -240,7 +240,7 @@
 			[
 				"Float Arrays",
 				[ 12, "On Array Loop", true ],
-				[ 13, "Array Loop ID Equals", true ],
+				//[ 13, "Array Loop ID Equals", true ],
 				"---",
 				[ 14, "Current Index Equals", true ],
 				[ 15, "Current Value Equals", true ],
@@ -251,7 +251,7 @@
 			[
 				"String Arrays",
 				[ 17, "On Array Loop", true ],
-				[ 18, "Array Loop ID Equals", true ],
+				//[ 18, "Array Loop ID Equals", true ],
 				"---",
 				[ 19, "Current Index Equals", true ],
 				[ 20, "Current Value Equals", true ],
@@ -1382,7 +1382,7 @@
 			}, //7
 			{
 				"Title": "%o : IntArray %0 LoopID = %1",
-				"Triggered": true,
+				"Triggered": false,
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "String", "Loop ID" ]
@@ -1422,7 +1422,7 @@
 			}, //12
 			{
 				"Title": "%o : FloatArray %0 LoopID = %1",
-				"Triggered": true,
+				"Triggered": false,
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "String", "Loop ID" ]
@@ -1462,7 +1462,7 @@
 			}, //17
 			{
 				"Title": "%o : StringArray %0 LoopID = %1",
-				"Triggered": true,
+				"Triggered": false,
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "String", "Loop ID" ]
