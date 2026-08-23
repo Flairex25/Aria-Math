@@ -105,7 +105,7 @@ int Extension::eCompLessEq(float valueA, float valueB) { return (valueA <= value
 //=======================================================================================================================================================================================================
 //Linear Interpolation
 float Extension::eLerp(float valueA, float valueB, float valueT) { return Math::Ease(valueA, valueB, valueT, Math::EasingStyle::Linear, Math::EasingDirection::InOut); }
-float Extension::eLerpSmooth(float valueA, float valueB, float valueT, float deltaTime) { return Math::Ease(valueA, valueB, powf(1.0f - valueT, deltaTime), Math::EasingStyle::Linear, Math::EasingDirection::InOut); }
+float Extension::eLerpSmooth(float valueA, float valueB, float valueT, float deltaTime) { return (valueA - valueB) * powf(1.0f - valueT, deltaTime) + valueB; }
 float Extension::ePointSlope(float x0, float x1, float y0, float y1, float valueT) { return (y1 - y0)/(x1 - x0) * (valueT - x0) + y0; }
 //=======================================================================================================================================================================================================
 //Easing
