@@ -10,7 +10,7 @@
 class IntArray {
 private:
 	const TCHAR* ID = _T("[EMPTY]");
-	const TCHAR* LoopID = _T("");
+	const TCHAR* LoopID = _tcsdup(_T(""));
 	std::vector<int> arr;
 	int loopIndex = 0;
 	int loopAmount = 0;
@@ -44,6 +44,7 @@ public:
 		this->ID = ID;
 	}
 	void SetLoopID(const TCHAR* LoopID) {
+		free((void*)this->LoopID);
 		this->LoopID = LoopID;
 	}
 	void SetArray(std::vector<int> arr) {
@@ -68,5 +69,7 @@ namespace IntegerArrays {
 	IntArray* GetFromArray(const TCHAR* ID);
 	void RemoveFromArray(const TCHAR* ID);
 	void Delete();
-}
+	std::vector<IntArray> Get();
+	void Set(std::vector<IntArray> newList);
+};
 //==========================================================================================================

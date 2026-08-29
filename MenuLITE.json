@@ -229,7 +229,7 @@
 			[
 				"Integer Arrays",
 				[ 7, "On Array Loop" ],
-				[ 8, "Array Loop ID Equals" ],
+				//[ 8, "Array Loop ID Equals" ],
 				"---",
 				[ 9, "Current Index Equals" ],
 				[ 10, "Current Value Equals" ],
@@ -240,7 +240,7 @@
 			[
 				"Float Arrays",
 				[ 12, "On Array Loop", true ],
-				[ 13, "Array Loop ID Equals", true ],
+				//[ 13, "Array Loop ID Equals", true ],
 				"---",
 				[ 14, "Current Index Equals", true ],
 				[ 15, "Current Value Equals", true ],
@@ -251,7 +251,7 @@
 			[
 				"String Arrays",
 				[ 17, "On Array Loop", true ],
-				[ 18, "Array Loop ID Equals", true ],
+				//[ 18, "Array Loop ID Equals", true ],
 				"---",
 				[ 19, "Current Index Equals", true ],
 				[ 20, "Current Value Equals", true ],
@@ -331,12 +331,12 @@
 				[ 31, "Cotangent (Radians)" ],
 				[ 32, "Cotangent (Degrees)" ],
 				"---",
-				[ 33, "Hyperbolic Sine (Radians)" ],
-				[ 34, "Hyperbolic Sine (Degrees)" ],
-				[ 35, "Hyperbolic Cosine (Radians)" ],
-				[ 36, "Hyperbolic Cosine (Degrees)" ],
-				[ 37, "Hyperbolic Tangent (Radians)" ],
-				[ 38, "Hyperbolic Tangent (Degrees)" ],
+				[ 33, "Hyperbolic Sine" ],
+				//[ 34, "Hyperbolic Sine (Degrees)" ],
+				[ 35, "Hyperbolic Cosine" ],
+				//[ 36, "Hyperbolic Cosine (Degrees)" ],
+				[ 37, "Hyperbolic Tangent" ],
+				//[ 38, "Hyperbolic Tangent (Degrees)" ],
 				"---",
 				[ 39, "Inverse Sine" ],
 				[ 40, "Inverse Cosine" ],
@@ -1382,7 +1382,7 @@
 			}, //7
 			{
 				"Title": "%o : IntArray %0 LoopID = %1",
-				"Triggered": true,
+				"Triggered": false,
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "String", "Loop ID" ]
@@ -1422,7 +1422,7 @@
 			}, //12
 			{
 				"Title": "%o : FloatArray %0 LoopID = %1",
-				"Triggered": true,
+				"Triggered": false,
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "String", "Loop ID" ]
@@ -1462,7 +1462,7 @@
 			}, //17
 			{
 				"Title": "%o : StringArray %0 LoopID = %1",
-				"Triggered": true,
+				"Triggered": false,
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "String", "Loop ID" ]
@@ -1754,10 +1754,10 @@
 			}, //32
 			//Hyperbolic Trig Functions
 			{
-				"Title": "a_hSinR(",
+				"Title": "a_Sinh(",
 				"Returns": "Float",
 				"Parameters": [
-					[ "Float", "Angle" ]
+					[ "Float", "Area" ]
 				]
 			}, //33
 			{
@@ -1768,10 +1768,10 @@
 				]
 			}, //34
 			{
-				"Title": "a_hCosR(",
+				"Title": "a_Cosh(",
 				"Returns": "Float",
 				"Parameters": [
-					[ "Float", "Angle" ]
+					[ "Float", "Area" ]
 				]
 			}, //35
 			{
@@ -1782,10 +1782,10 @@
 				]
 			}, //36
 			{
-				"Title": "a_hTanR(",
+				"Title": "a_Tanh(",
 				"Returns": "Float",
 				"Parameters": [
-					[ "Float", "Angle" ]
+					[ "Float", "Area" ]
 				]
 			}, //37
 			{
@@ -3017,9 +3017,10 @@
 		],
 		"Properties": [
 			{
-				"Title": "Global Data (Disabled on the free version)",
+				"Title": "Enable Global Data (disabled on the free version)",
 				"Info": "Allows internal data to remain in memory when switching Frames.",
-				"EnableIf":  "false",
+				"ShowIf": "false",
+				"EnableIf": "false",
 				"Type": "Checkbox",
 				"DefaultState": false,
 				"Bold": true

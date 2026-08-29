@@ -35,6 +35,10 @@ void StringArrays::AddToArray(const TCHAR* ID) {
 StringArray* StringArrays::GetFromArray(const TCHAR* ID) {
 	//Check if ID is an empty ID
 	if (_tcscmp(ID, _T("")) == 0) {
+		for (const TCHAR* str : emptyArr.GetArray()) {
+			free((void*)str);
+		}
+		emptyArr.SetArray(std::vector<const TCHAR*>());
 		return &emptyArr;
 	}
 
@@ -47,6 +51,10 @@ StringArray* StringArrays::GetFromArray(const TCHAR* ID) {
 		}
 	}
 
+	for (const TCHAR* str : emptyArr.GetArray()) {
+		free((void*)str);
+	}
+	emptyArr.SetArray(std::vector<const TCHAR*>());
 	return &emptyArr;
 }
 //==========================================================================================================
@@ -62,11 +70,20 @@ void StringArrays::RemoveFromArray(const TCHAR* ID) {
 		const TCHAR* currentID = currentArray->GetID();
 		if (_tcscmp(currentID, ID) == 0) {
 			arrArray.erase(arrArray.begin() + i);
+			return;
 		}
 	}
 }
 //==========================================================================================================
 void StringArrays::Delete() {
 	std::vector<StringArray>().swap(arrArray);
+}
+//==========================================================================================================
+std::vector<StringArray> StringArrays::Get() {
+	return arrArray;
+}
+//==========================================================================================================
+void StringArrays::Set(std::vector<StringArray> newList) {
+	newList.swap(arrArray);
 }
 //==========================================================================================================

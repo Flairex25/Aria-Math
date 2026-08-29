@@ -35,6 +35,7 @@ void BagRandomization::AddToArray(const TCHAR* ID) {
 BagRandomizer* BagRandomization::GetFromArray(const TCHAR* ID) {
 	//Check if ID is an empty ID
 	if (_tcscmp(ID, _T("")) == 0) {
+		emptyRandomizer.Clear();
 		return &emptyRandomizer;
 	}
 
@@ -47,6 +48,7 @@ BagRandomizer* BagRandomization::GetFromArray(const TCHAR* ID) {
 		}
 	}
 
+	emptyRandomizer.Clear();
 	return &emptyRandomizer;
 }
 //==========================================================================================================
@@ -68,5 +70,13 @@ void BagRandomization::RemoveFromArray(const TCHAR* ID) {
 //==========================================================================================================
 void BagRandomization::Delete() {
 	std::vector<BagRandomizer>().swap(randomizerArray);
+}
+//==========================================================================================================
+std::vector<BagRandomizer> BagRandomization::Get() {
+	return randomizerArray;
+}
+//==========================================================================================================
+void BagRandomization::Set(std::vector<BagRandomizer> newList) {
+	newList.swap(randomizerArray);
 }
 //==========================================================================================================

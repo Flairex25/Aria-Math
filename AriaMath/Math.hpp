@@ -85,6 +85,7 @@ namespace Math {
 	int ToBoolean(int input);
 	int NOT(int input);
 	//Randomization
+	void SetupRNG();
 	void SetSeed();
 	void SetRandomSeed(int randomSeed);
 	int RRandomI(int valueA, int valueB);

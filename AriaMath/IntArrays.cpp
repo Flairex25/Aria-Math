@@ -35,6 +35,7 @@ void IntegerArrays::AddToArray(const TCHAR* ID) {
 IntArray* IntegerArrays::GetFromArray(const TCHAR* ID) {
 	//Check if ID is an empty ID
 	if (_tcscmp(ID, _T("")) == 0) {
+		emptyArr.SetArray(std::vector<int>());
 		return &emptyArr;
 	}
 
@@ -47,6 +48,7 @@ IntArray* IntegerArrays::GetFromArray(const TCHAR* ID) {
 		}
 	}
 
+	emptyArr.SetArray(std::vector<int>());
 	return &emptyArr;
 }
 //==========================================================================================================
@@ -68,5 +70,13 @@ void IntegerArrays::RemoveFromArray(const TCHAR* ID) {
 //==========================================================================================================
 void IntegerArrays::Delete() {
 	std::vector<IntArray>().swap(arrArray);
+}
+//==========================================================================================================
+std::vector<IntArray> IntegerArrays::Get() {
+	return arrArray;
+}
+//==========================================================================================================
+void IntegerArrays::Set(std::vector<IntArray> newList) {
+	newList.swap(arrArray);
 }
 //==========================================================================================================

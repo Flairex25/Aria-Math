@@ -10,7 +10,7 @@
 class StringArray {
 private:
 	const TCHAR* ID = _T("[EMPTY]");
-	const TCHAR* LoopID = _T("");
+	const TCHAR* LoopID = _tcsdup(_T(""));
 	std::vector<const TCHAR*> arr;
 	int loopIndex = 0;
 	int loopAmount = 0;
@@ -44,6 +44,7 @@ public:
 		this->ID = ID;
 	}
 	void SetLoopID(const TCHAR* LoopID) {
+		free((void*)this->LoopID);
 		this->LoopID = LoopID;
 	}
 	void SetArray(std::vector<const TCHAR*> arr) {
@@ -61,6 +62,12 @@ public:
 	void SetIsReverse(bool isReverse) {
 		this->isReverse = isReverse;
 	}
+	//Destructor
+	~StringArray() {
+		for (const TCHAR* str : this->GetArray()) {
+			free((void*)str);
+		}
+	}
 };
 //==========================================================================================================
 namespace StringArrays {
@@ -68,5 +75,7 @@ namespace StringArrays {
 	StringArray* GetFromArray(const TCHAR* ID);
 	void RemoveFromArray(const TCHAR* ID);
 	void Delete();
-}
+	std::vector<StringArray> Get();
+	void Set(std::vector<StringArray> newList);
+};
 //==========================================================================================================

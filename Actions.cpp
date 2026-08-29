@@ -14,6 +14,7 @@ void Extension::aSetRandomSeed(int randomSeed) {
 }
 //=====================================================
 void Extension::aCreateBagRandomizer(const TCHAR* ID) {
+	BagRandomization::RemoveFromArray(ID);
 	BagRandomization::AddToArray(ID);
 }
 
@@ -350,7 +351,7 @@ void Extension::aLoopThroughIntegerArrayReverse(const TCHAR* ID) {
 }
 
 void Extension::aSetIntegerArrayLoopID(const TCHAR* arrayID, const TCHAR* loopID) {
-	IntegerArrays::GetFromArray(arrayID)->SetLoopID(loopID);
+	IntegerArrays::GetFromArray(arrayID)->SetLoopID(_tcsdup(loopID));
 }
 
 void Extension::aParseStringToIntArray(const TCHAR* arrayID, const TCHAR* str, const TCHAR* delimiters) {
@@ -507,7 +508,7 @@ void Extension::aLoopThroughFloatArrayReverse(const TCHAR* ID) {
 }
 
 void Extension::aSetFloatArrayLoopID(const TCHAR* arrayID, const TCHAR* loopID) {
-	FloatArrays::GetFromArray(arrayID)->SetLoopID(loopID);
+	FloatArrays::GetFromArray(arrayID)->SetLoopID(_tcsdup(loopID));
 }
 
 void Extension::aParseStringToFloatArray(const TCHAR* arrayID, const TCHAR* str, const TCHAR* delimiters) {
@@ -585,13 +586,13 @@ void Extension::aSetStringArrayElement(const TCHAR* ID, int index, const TCHAR* 
 		std::vector<const TCHAR*> arr = currentArray->GetArray();
 		if (i >= arr.size()) {
 			arr.emplace_back();
-			arr[i] = _T("");
+			arr[i] = _tcsdup(_T(""));
 			currentArray->SetArray(arr);
 		}
 	}
 	StringArray* currentArray = StringArrays::GetFromArray(ID);
 	std::vector<const TCHAR*> arr = currentArray->GetArray();
-	arr[index] = value;
+	arr[index] = _tcsdup(value);
 	currentArray->SetArray(arr);
 }
 
@@ -600,6 +601,7 @@ void Extension::aDeleteStringArrayElement(const TCHAR* ID, int index) {
 	std::vector<const TCHAR*> arr = currentArray->GetArray();
 	if (arr.size() == 0) { return; }
 	if (index < 0 || index >= arr.size()) { return; }
+	free((void*)arr[index]);
 	arr.erase(arr.begin() + index);
 	currentArray->SetArray(arr);
 }
@@ -693,19 +695,24 @@ void Extension::aLoopThroughStringArrayReverse(const TCHAR* ID) {
 }
 
 void Extension::aSetStringArrayLoopID(const TCHAR* arrayID, const TCHAR* loopID) {
-	StringArrays::GetFromArray(arrayID)->SetLoopID(loopID);
+	StringArrays::GetFromArray(arrayID)->SetLoopID(_tcsdup(loopID));
 }
 
 void Extension::aParseStringToStringArray(const TCHAR* arrayID, const TCHAR* str, const TCHAR* delimiters) {
 	StringArray* currentArray = StringArrays::GetFromArray(arrayID);
+	LOGI(arrayID);
 	currentArray->SetIsPaused(true);
 	currentArray->SetLoopAmount(0);
 	currentArray->SetLoopIndex(0);
-	std::vector<const TCHAR*> arr;
+	std::vector<const TCHAR*> arr = currentArray->GetArray();
+	for (const TCHAR* str : arr) {
+		free((void*)str);
+	}
+	std::vector<const TCHAR*>().swap(arr);
 	std::vector<const TCHAR*>& splitString = AriaStrings::ParseString(str, delimiters);
 	if (splitString.size() == 0) { return; }
 	for (int i = 0; i < splitString.size(); i++) {
-		arr.push_back(splitString[i]);
+		arr.push_back(_tcsdup(splitString[i]));
 	}
 	currentArray->SetArray(arr);
 }

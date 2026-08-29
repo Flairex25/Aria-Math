@@ -321,14 +321,20 @@ int Math::NOT(int input) {
 int	currentTimer = 0;
 int randomSeed = 0;
 
+void Math::SetupRNG() {
+	randomSeed = 0;
+	currentTimer = 0;
+}
+
 void Math::SetRandomSeed(int value) {
 	randomSeed = value;
+	if (value == 0) { return; }
 	srand(value);
 };
 
 void Math::SetSeed() {
 	if (randomSeed != 0) { return; }
-	if ((time(NULL) - currentTimer) > MAX_TIMER_DIFFERENCE) {
+	if (time(NULL) - currentTimer > MAX_TIMER_DIFFERENCE) {
 		currentTimer = time(NULL);
 		srand(currentTimer);
 	}

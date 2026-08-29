@@ -10,7 +10,7 @@
 class FloatArray {
 private:
 	const TCHAR* ID = _T("[EMPTY]");
-	const TCHAR* LoopID = _T("");
+	const TCHAR* LoopID = _tcsdup(_T(""));
 	std::vector<float> arr;
 	int loopIndex = 0;
 	int loopAmount = 0;
@@ -44,6 +44,7 @@ public:
 		this->ID = ID;
 	}
 	void SetLoopID(const TCHAR* LoopID) {
+		free((void*)this->LoopID);
 		this->LoopID = LoopID;
 	}
 	void SetArray(std::vector<float> arr) {
@@ -68,5 +69,7 @@ namespace FloatArrays {
 	FloatArray* GetFromArray(const TCHAR* ID);
 	void RemoveFromArray(const TCHAR* ID);
 	void Delete();
-}
+	std::vector<FloatArray> Get();
+	void Set(std::vector<FloatArray> newList);
+};
 //==========================================================================================================

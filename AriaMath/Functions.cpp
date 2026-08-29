@@ -35,6 +35,7 @@ void Functions::AddToArray(const TCHAR* ID) {
 AriaFunction* Functions::GetFromArray(const TCHAR* ID) {
 	//Check if ID is an empty ID
 	if (_tcscmp(ID, _T("")) == 0) {
+		emptyFunction.DeleteAllParams();
 		return &emptyFunction;
 	}
 
@@ -47,6 +48,7 @@ AriaFunction* Functions::GetFromArray(const TCHAR* ID) {
 		}
 	}
 
+	emptyFunction.DeleteAllParams();
 	return &emptyFunction;
 }
 //==========================================================================================================
@@ -68,5 +70,13 @@ void Functions::RemoveFromArray(const TCHAR* ID) {
 //==========================================================================================================
 void Functions::Delete() {
 	std::vector<AriaFunction>().swap(functionArray);
+}
+//==========================================================================================================
+std::vector<AriaFunction> Functions::Get() {
+	return functionArray;
+}
+//==========================================================================================================
+void Functions::Set(std::vector<AriaFunction> newList) {
+	newList.swap(functionArray);
 }
 //==========================================================================================================
