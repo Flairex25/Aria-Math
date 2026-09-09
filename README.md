@@ -5,7 +5,9 @@ You can build the full version for free using this repository.
 
 If you instead want to purchase the extension, you can find it on my Ko-Fi page here: https://ko-fi.com/s/7ad22d8ff4?preview=true 
 
+## Extension Documentation
 
+https://docs.google.com/document/d/1YXE46nXY1gG0s7N6vbZjvRHmcvGVBHOupPvndE9Vdi4/edit?pli=1&tab=t.0#heading=h.1m5ci7b0nntc
 
 ## Build Instructions
 
