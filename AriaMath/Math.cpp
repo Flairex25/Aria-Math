@@ -44,6 +44,11 @@ int Math::MinI(int valueA, int valueB) {
 float Math::MinF(float valueA, float valueB) {
 	return (valueA <= valueB) ? valueA : valueB;
 }
+//Smooth Min
+float Math::MinS(float valueA, float valueB, float smoothness) {
+	smoothness = Math::MaxF(smoothness, 0.0f);
+	return ((valueA + valueB + sqrt(math.pow(valueA - valueB, 2.0) + math.pow(smoothness, 2.0)))/2)
+}
 //Max Integer
 int Math::MaxI(int valueA, int valueB) {
 	return (valueA >= valueB) ? valueA : valueB;
@@ -51,6 +56,11 @@ int Math::MaxI(int valueA, int valueB) {
 //Max Float
 float Math::MaxF(float valueA, float valueB) {
 	return (valueA >= valueB) ? valueA : valueB;
+}
+//Smooth Max
+float Math::MaxS(float valueA, float valueB, float smoothness) {
+	smoothness = Math::MaxF(smoothness, 0.0f);
+	return ((valueA + valueB - sqrt(math.pow(valueA - valueB, 2.0) + math.pow(smoothness, 2.0)))/2)
 }
 //Clamp Integer
 int Math::ClampI(int value, int min, int max) {
@@ -76,6 +86,20 @@ float Math::ClampF(float value, float min, float max) {
 	}
 	result = Math::MinF(result, max);
 	result = Math::MaxF(result, min);
+	return result;
+}
+//Smooth Clamp
+float Math::ClampS(float value, float min, float max, float smoothness) {
+	smoothness = Math::MaxF(smoothness, 0.0f);
+	float valMin = min;
+	float valMax = max;
+	float result = value;
+	if (min > max) {
+		valMin = max;
+		valMax = min;
+	}
+	result = Math::MinS(result, max, smoothness);
+	result = Math::MaxS(result, min, smoothness);
 	return result;
 }
 //================================================================================================================
@@ -348,11 +372,9 @@ int Math::RRandomI(int valueA, int valueB) {
 }
 float Math::RRandomF(float valueA, float valueB) {
 	Math::SetSeed();
-	int vA = valueA;
-	int vB = valueB;
-	if (valueB < valueA) { vA = valueB; vB = valueA; }
-	int result = (rand() % (vB - vA)) + vA;
-	int remainder = (rand() % ((int)pow(10, RRANDOM_DECIMAL_ACCURACY) - 1));
-	return result + (float)remainder / pow(10, RRANDOM_DECIMAL_ACCURACY);
+	int vA = (int)(valueA * pow(10,RRANDOM_DECIMAL_ACCURACY));
+	int vB = (int)(valueB * pow(10,RRANDOM_DECIMAL_ACCURACY));
+	int intResult = Math::RRandomI(vA,vB);
+	return (float)(intResult/powf(10.0f,RRANDOM_DECIMAL_ACCURACY));
 }
 //================================================================================================================

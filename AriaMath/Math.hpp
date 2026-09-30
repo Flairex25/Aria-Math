@@ -27,10 +27,13 @@ namespace Math {
 	//Clamps
 	int MinI(int valueA, int valueB);
 	float MinF(float valueA, float valueB);
+	float MinS(float valueA, float valueB, float smoothness);
 	int MaxI(int valueA, int valueB);
 	float MaxF(float valueA, float valueB);
+	float MaxS(float valueA, float valueB, float smoothness);
 	int ClampI(int value, int min, int max);
 	float ClampF(float value, float min, float max);
+	float ClampS(float value, float min, float max, float smoothness);
 	//Rounding
 	int RoundI(float input);
 	float RoundF(float input, int decimal);
