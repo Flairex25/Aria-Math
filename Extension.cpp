@@ -173,6 +173,10 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr, const 
 	//Runtime
 	LinkCondition(22, cIsRunningInEditor);
 	LinkCondition(23, cIsRunningInSubApplication);
+<<<<<<< HEAD
+	LinkCondition(24, cImmediateAlways);
+=======
+>>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 	//=======================================================================================================================================================================================================
 	//Expressions
 	//===================
@@ -423,6 +427,14 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr, const 
 	LinkExpression(190, eVect3z);
 	LinkExpression(191, eVect3M);
 	LinkExpression(192, eVect3Dot);
+<<<<<<< HEAD
+	//===================
+	//Smooth Min Max and Clamp
+	LinkExpression(193, eClampS);
+	LinkExpression(194, eMinS);
+	LinkExpression(195, eMaxS);
+=======
+>>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 	//=======================================================================================================================================================================================================
 
 	/*
@@ -567,6 +579,10 @@ REFLAG Extension::Handle()
 		DarkEdif expects you to do manual drawing in Extension::Display()
 		and other funcs.
 	*/
+<<<<<<< HEAD
+	Runtime.GenerateEvent(24);
+=======
+>>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 
 #if DARKEDIF_DISPLAY_TYPE >= DARKEDIF_DISPLAY_SIMPLE
 	// Example variables for showing how display can be modified.

@@ -263,7 +263,12 @@
 			[
 				"Runtime",
 				[ 22, "Is Running in Editor" ],
+<<<<<<< HEAD
+				[ 23, "Is Running in Sub-Application" ],
+				[ 24, "Immediate Always"]
+=======
 				[ 23, "Is Running in Sub-Application" ]
+>>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 			],
 			"---"
 			//=============================================
@@ -365,10 +370,20 @@
 				"Operations",
 				[ 50, "Clamp Integer" ],
 				[ 51, "Clamp Float" ],
+<<<<<<< HEAD
+				[ 193, "Smooth Clamp" ],
+				[ 52, "Min of 2 Integers" ],
+				[ 53, "Min of 2 Floats" ],
+				[ 194, "Smooth Min" ],
+				[ 54, "Max of 2 Integers" ],
+				[ 55, "Max of 2 Floats" ],
+				[ 195, "Smooth Max" ],
+=======
 				[ 52, "Min of 2 Integers" ],
 				[ 53, "Min of 2 Floats" ],
 				[ 54, "Max of 2 Integers" ],
 				[ 55, "Max of 2 Floats" ],
+>>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 				"---",
 				[ 56, "Round" ],
 				[ 57, "Round to decimal" ],
@@ -1505,7 +1520,17 @@
 				"Triggered": false,
 				"Parameters": [
 				]
+<<<<<<< HEAD
+			}, //23
+			{
+				"Title": "%o : Always",
+				"Triggered": true,
+				"Parameters": [
+				]
+			} //24
+=======
 			} //23
+>>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 			//=============================================
 		],
 		//====================================================================================================================================================================
@@ -3013,7 +3038,41 @@
 					[ "String", "Vector3 ID 1" ],
 					[ "String", "Vector3 ID 2" ]
 				]
+<<<<<<< HEAD
+			}, //192
+			//=============================================
+			//Smooth Min, Max and Clamp
+			{
+				"Title": "a_ClampS(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Input" ],
+					[ "Float", "Min Value" ],
+					[ "Float", "Max Value" ],
+					[ "Float", "Smoothness" ]
+				]
+			}, //193
+			{
+				"Title": "a_MinS(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Smoothness" ]
+				]
+			}, //194
+			{
+				"Title": "a_MaxS(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "Float", "Value A" ],
+					[ "Float", "Value B" ],
+					[ "Float", "Smoothness" ]
+				]
+			} //195
+=======
 			} //192
+>>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 		],
 		"Properties": [
 			{
