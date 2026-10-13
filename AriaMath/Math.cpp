@@ -47,15 +47,7 @@ float Math::MinF(float valueA, float valueB) {
 //Smooth Min
 float Math::MinS(float valueA, float valueB, float smoothness) {
 	smoothness = Math::MaxF(smoothness, 0.0f);
-<<<<<<< HEAD
-<<<<<<< HEAD
 	return ((valueA + valueB - sqrt(pow(valueA - valueB, 2.0) + pow(smoothness, 2.0))) / 2);
-=======
-	return ((valueA + valueB + sqrt(math.pow(valueA - valueB, 2.0) + math.pow(smoothness, 2.0)))/2)
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
-=======
-	return ((valueA + valueB + sqrt(math.pow(valueA - valueB, 2.0) + math.pow(smoothness, 2.0)))/2)
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 }
 //Max Integer
 int Math::MaxI(int valueA, int valueB) {
@@ -68,15 +60,7 @@ float Math::MaxF(float valueA, float valueB) {
 //Smooth Max
 float Math::MaxS(float valueA, float valueB, float smoothness) {
 	smoothness = Math::MaxF(smoothness, 0.0f);
-<<<<<<< HEAD
-<<<<<<< HEAD
 	return ((valueA + valueB + sqrt(pow(valueA - valueB, 2.0) + pow(smoothness, 2.0))) / 2);
-=======
-	return ((valueA + valueB - sqrt(math.pow(valueA - valueB, 2.0) + math.pow(smoothness, 2.0)))/2)
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
-=======
-	return ((valueA + valueB - sqrt(math.pow(valueA - valueB, 2.0) + math.pow(smoothness, 2.0)))/2)
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 }
 //Clamp Integer
 int Math::ClampI(int value, int min, int max) {
@@ -202,11 +186,7 @@ float Math::Root2(float value) {
 }
 //Nth Root
 float Math::RootN(float value, float radical) {
-<<<<<<< HEAD
 	return pow(value, 1.0f / radical);
-=======
-	return pow(value, 1.0f/radical);
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 }
 //================================================================================================================
 //Angles
@@ -311,11 +291,7 @@ float Math::Ease(float a, float b, float t, Math::EasingStyle easingStyle, Math:
 //================================================================================================================
 float Math::ExpDecay(float x0, float x1, float y0, float y1, float t) {
 	std::function<float(float)> function = [=](float n) { return expf(-2.0f * n); };
-<<<<<<< HEAD
 	return y0 + (y1 - y0) * ((1.0f - function((t - x0) / (x1 - x0))) / (1.0f - function(1.0f)));
-=======
-	return y0 + (y1 - y0) * ((1.0f - function((t-x0)/(x1-x0))) / (1.0f - function(1.0f)));
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 }
 float Math::SqrtDecay(float x0, float x1, float y0, float y1, float t) {
 	std::function<float(float)> function = [=](float n) { return sqrtf(n); };
@@ -361,11 +337,7 @@ int Math::ToBoolean(int input) {
 	return (input == 0) ? 0 : 1;
 }
 int Math::NOT(int input) {
-<<<<<<< HEAD
 	return !(Math::ToBoolean(input) == 1);
-=======
-	return !(Math::ToBoolean(input)==1);
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 }
 //================================================================================================================
 //Randomization
@@ -400,22 +372,9 @@ int Math::RRandomI(int valueA, int valueB) {
 }
 float Math::RRandomF(float valueA, float valueB) {
 	Math::SetSeed();
-<<<<<<< HEAD
-<<<<<<< HEAD
 	int vA = (int)(valueA * pow(10, RRANDOM_DECIMAL_ACCURACY));
 	int vB = (int)(valueB * pow(10, RRANDOM_DECIMAL_ACCURACY));
 	int intResult = Math::RRandomI(vA, vB);
 	return (float)(intResult / powf(10.0f, RRANDOM_DECIMAL_ACCURACY));
-=======
-=======
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
-	int vA = (int)(valueA * pow(10,RRANDOM_DECIMAL_ACCURACY));
-	int vB = (int)(valueB * pow(10,RRANDOM_DECIMAL_ACCURACY));
-	int intResult = Math::RRandomI(vA,vB);
-	return (float)(intResult/powf(10.0f,RRANDOM_DECIMAL_ACCURACY));
-<<<<<<< HEAD
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
-=======
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 }
 //================================================================================================================

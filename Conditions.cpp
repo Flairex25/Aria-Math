@@ -166,11 +166,8 @@ bool Extension::cIsRunningInSubApplication() {
 	return (rhPtr->get_App()->get_ParentApp() != nullptr);
 }
 
-<<<<<<< HEAD
 bool Extension::cImmediateAlways() {
 	return true;
 }
 
-=======
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 //=======================================================================================================================================================================================================

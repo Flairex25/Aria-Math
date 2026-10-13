@@ -32,11 +32,7 @@ public:
 	Edif::Runtime Runtime;
 
 	static const int MinimumBuild = 254;
-<<<<<<< HEAD
-	static const int Version = 5;
-=======
-	static const int Version = 4;
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
+	static const int Version = 6;
 
 	// Warning: OEFLAGS/OEPREFS cannot be freely modified when you have used them in MFAs.
 	static constexpr OEFLAGS OEFLAGS = OEFLAGS::NONE;
@@ -237,10 +233,7 @@ public:
 	//Runtime
 	bool cIsRunningInEditor();
 	bool cIsRunningInSubApplication();
-<<<<<<< HEAD
 	bool cImmediateAlways();
-=======
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 	//=======================================================================================================================================================================================================
 	//Expressions
 	//===================
@@ -315,7 +308,6 @@ public:
 	//Clamps
 	int eClampI(int input, int min, int max);
 	float eClampF(float input, float min, float max);
-<<<<<<< HEAD
 	float eClampS(float input, float min, float max, float smoothness);
 	int eMinI(int valueA, int valueB);
 	float eMinF(float valueA, float valueB);
@@ -323,12 +315,6 @@ public:
 	int eMaxI(int valueA, int valueB);
 	float eMaxF(float valueA, float valueB);
 	float eMaxS(float valueA, float valueB, float smoothness);
-=======
-	int eMinI(int valueA, int valueB);
-	float eMinF(float valueA, float valueB);
-	int eMaxI(int valueA, int valueB);
-	float eMaxF(float valueA, float valueB);
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 	//Rounding
 	int eRound(float input);
 	float eRoundTo(float input, int decimal);

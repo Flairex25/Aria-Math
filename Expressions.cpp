@@ -73,7 +73,6 @@ float Extension::eFactorialF(float input) { return Math::FactorialF(input); }
 //Operations
 int Extension::eClampI(int input, int min, int max) { return Math::ClampI(input, min, max); }
 float Extension::eClampF(float input, float min, float max) { return Math::ClampF(input, min, max); }
-<<<<<<< HEAD
 float Extension::eClampS(float input, float min, float max, float smoothness) { return Math::ClampS(input, min, max, smoothness); }
 int Extension::eMinI(int valueA, int valueB) { return Math::MinI(valueA, valueB); }
 float Extension::eMinF(float valueA, float valueB) { return Math::MinF(valueA, valueB); }
@@ -81,12 +80,6 @@ float Extension::eMinS(float valueA, float valueB, float smoothness) { return Ma
 int Extension::eMaxI(int valueA, int valueB) { return Math::MaxI(valueA, valueB); }
 float Extension::eMaxF(float valueA, float valueB) { return Math::MaxF(valueA, valueB); }
 float Extension::eMaxS(float valueA, float valueB, float smoothness) { return Math::MaxS(valueA, valueB, smoothness); }
-=======
-int Extension::eMinI(int valueA, int valueB) { return Math::MinI(valueA, valueB); }
-float Extension::eMinF(float valueA, float valueB) { return Math::MinF(valueA, valueB); }
-int Extension::eMaxI(int valueA, int valueB) { return Math::MaxI(valueA, valueB); }
-float Extension::eMaxF(float valueA, float valueB) { return Math::MaxF(valueA, valueB); }
->>>>>>> e7e96375faa3050d6c11993269e6d86283d0a188
 //Rounding
 int Extension::eRound(float input) { return Math::RoundI(input); }
 float Extension::eRoundTo(float input, int decimal) { return Math::RoundF(input, decimal); }
