@@ -591,6 +591,7 @@
 				"---",
 				[ 168, "Get Loop ID of Int Array" ],
 				"---",
+				[ 196, "Stringify Int Array" ],
 				[ 169, "Get Printout of Int Array" ]
 			],
 			//"---",
@@ -604,6 +605,7 @@
 				"---",
 				[ 174, "Get Loop ID of Float Array" ],
 				"---",
+				[ 197, "Stringify Float Array" ],
 				[ 175, "Get Printout of Float Array" ]
 			],
 			//"---",
@@ -617,6 +619,7 @@
 				"---",
 				[ 180, "Get Loop ID of String Array" ],
 				"---",
+				[ 198, "Stringify String Array" ],
 				[ 181, "Get Printout of String Array" ]
 			],
 			"---",
@@ -3053,7 +3056,33 @@
 					[ "Float", "Value B" ],
 					[ "Float", "Smoothness" ]
 				]
-			} //195
+			}, //195
+			//=============================================
+			//Array Stringify
+			{
+				"Title": "a_IntArrStringify(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "Delimiter" ]
+				]
+			}, //196
+			{
+				"Title": "a_FloatArrStringify(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "Delimiter" ]
+				]
+			}, //197
+			{
+				"Title": "a_StringArrStringify(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Array ID" ],
+					[ "String", "Delimiter" ]
+				]
+			} //198
 		],
 		"Properties": [
 			{

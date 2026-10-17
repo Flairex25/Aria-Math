@@ -429,6 +429,11 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr, const 
 	LinkExpression(193, eClampS);
 	LinkExpression(194, eMinS);
 	LinkExpression(195, eMaxS);
+	//===================
+	//Array Stringify
+	LinkExpression(196, eIntArrayStringify);
+	LinkExpression(197, eFloatArrayStringify);
+	LinkExpression(198, eStringArrayStringify);
 	//=======================================================================================================================================================================================================
 
 	/*

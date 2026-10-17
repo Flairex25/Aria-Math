@@ -32,7 +32,7 @@ public:
 	Edif::Runtime Runtime;
 
 	static const int MinimumBuild = 254;
-	static const int Version = 6;
+	static const int Version = 7;
 
 	// Warning: OEFLAGS/OEPREFS cannot be freely modified when you have used them in MFAs.
 	static constexpr OEFLAGS OEFLAGS = OEFLAGS::NONE;
@@ -460,6 +460,7 @@ public:
 	int eIntArraySize(const TCHAR* arrayID);
 	const TCHAR* eIntArrayLoopID(const TCHAR* arrayID);
 	const TCHAR* ePrintIntArray(const TCHAR* arrayID);
+	const TCHAR* eIntArrayStringify(const TCHAR* arrayID, const TCHAR* delimiter);
 	//FloatArrays
 	float eFloatArrayValue(const TCHAR* arrayID, int index);
 	int eFloatArrayLoopIndex(const TCHAR* arrayID);
@@ -467,6 +468,7 @@ public:
 	int eFloatArraySize(const TCHAR* arrayID);
 	const TCHAR* eFloatArrayLoopID(const TCHAR* arrayID);
 	const TCHAR* ePrintFloatArray(const TCHAR* arrayID);
+	const TCHAR* eFloatArrayStringify(const TCHAR* arrayID, const TCHAR* delimiter);
 	//StringArrays
 	const TCHAR* eStringArrayValue(const TCHAR* arrayID, int index);
 	int eStringArrayLoopIndex(const TCHAR* arrayID);
@@ -474,6 +476,7 @@ public:
 	int eStringArraySize(const TCHAR* arrayID);
 	const TCHAR* eStringArrayLoopID(const TCHAR* arrayID);
 	const TCHAR* ePrintStringArray(const TCHAR* arrayID);
+	const TCHAR* eStringArrayStringify(const TCHAR* arrayID, const TCHAR* delimiter);
 	//===================
 	//Vector2
 	float eVect2(const TCHAR* ID, const TCHAR* dimension);

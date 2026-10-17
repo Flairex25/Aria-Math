@@ -459,6 +459,20 @@ const TCHAR* Extension::ePrintIntArray(const TCHAR* arrayID) {
 	result = stream.str();
 	return result.c_str();
 }
+const TCHAR* Extension::eIntArrayStringify(const TCHAR* arrayID, const TCHAR* delimiter) {
+	std::vector<int> arr = IntegerArrays::GetFromArray(arrayID)->GetArray();
+	static std::basic_string<TCHAR> result;
+	std::basic_ostringstream<TCHAR> stream;
+	for (size_t i = 0; i < arr.size(); ++i)
+	{
+		if (i > 0) {
+			stream << delimiter;
+		}
+		stream << arr[i];
+	}
+	result = stream.str();
+	return result.c_str();
+}
 //FloatArrays
 float Extension::eFloatArrayValue(const TCHAR* arrayID, int index) {
 	FloatArray* currentArray = FloatArrays::GetFromArray(arrayID);
@@ -493,6 +507,20 @@ const TCHAR* Extension::ePrintFloatArray(const TCHAR* arrayID) {
 	result = stream.str();
 	return result.c_str();
 }
+const TCHAR* Extension::eFloatArrayStringify(const TCHAR* arrayID, const TCHAR* delimiter) {
+	std::vector<float> arr = FloatArrays::GetFromArray(arrayID)->GetArray();
+	static std::basic_string<TCHAR> result;
+	std::basic_ostringstream<TCHAR> stream;
+	for (size_t i = 0; i < arr.size(); ++i)
+	{
+		if (i > 0) {
+			stream << delimiter;
+		}
+		stream << arr[i];
+	}
+	result = stream.str();
+	return result.c_str();
+}
 //StringArrays
 const TCHAR* Extension::eStringArrayValue(const TCHAR* arrayID, int index) {
 	StringArray* currentArray = StringArrays::GetFromArray(arrayID);
@@ -523,6 +551,18 @@ const TCHAR* Extension::ePrintStringArray(const TCHAR* arrayID) {
 		result += arr[i];
 	}
 	result += _T(" }");
+	return result.c_str();
+}
+const TCHAR* Extension::eStringArrayStringify(const TCHAR* arrayID, const TCHAR* delimiter) {
+	std::vector<const TCHAR*> arr = StringArrays::GetFromArray(arrayID)->GetArray();
+	static std::basic_string<TCHAR> result;
+	for (size_t i = 0; i < arr.size(); ++i)
+	{
+		if (i > 0) {
+			result += delimiter;
+		}
+		result += arr[i];
+	}
 	return result.c_str();
 }
 //=======================================================================================================================================================================================================
