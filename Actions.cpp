@@ -40,15 +40,16 @@ void Extension::aRemoveIndexFromBagRandomizer(const TCHAR* ID, int index) {
 float prePauseGameSpeed = DeltaTime::GetGameSpeed();
 
 void Extension::aEnableTicks() {
-
+	MessageBoxA(NULL, "'Enable Ticks' is a removed action! Please consider deleting it.", "AriaMath - Removed Action Notice", MB_OK);
 }
 
 void Extension::aDisableTicks() {
-
+	MessageBoxA(NULL, "'Disable Ticks' is a removed action! Please consider deleting it.", "AriaMath - Removed Action Notice", MB_OK);
 }
 
 void Extension::aCalculateDeltaTime(int timer) {
-	DeltaTime::CalculateDeltaTime(timer);
+	MessageBoxA(NULL, "'Calculate Delta Time' is a deprecated action! Please consider deleting it.", "AriaMath - Deprecated Action Notice", MB_OK);
+	//DeltaTime::CalculateDeltaTime(timer);
 }
 
 void Extension::aSetDeltaTimeBase(int deltaTimeBase) {
@@ -83,11 +84,12 @@ void Extension::aResumeGameSpeed() {
 }
 
 void Extension::aSetTickRate(int tickRate) {
-
+	MessageBoxA(NULL, "'Set Tick Rate' is a deprecated action! Please consider deleting it.", "AriaMath - Deprecated Action Notice", MB_OK);
 }
 
 void Extension::aSetOldTimer(int oldTimer) {
-	DeltaTime::SetOldTimer(oldTimer);
+	MessageBoxA(NULL, "'Set Old Timer' is a deprecated action! Please consider deleting it.", "AriaMath - Deprecated Action Notice", MB_OK);
+	//DeltaTime::SetOldTimer(oldTimer);
 }
 
 //=======================================================================================================================================================================================================

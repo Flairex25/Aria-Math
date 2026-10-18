@@ -20,11 +20,13 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr, const 
 	objCExtPtr(objCExtPtr), Runtime(this, objCExtPtr), FusionDebugger(this)
 #endif
 {
+	//=======================================================================================================================================================================================================
+	
+	//=======================================================================================================================================================================================================
 	/*
 		Link all your action/condition/expression functions to their IDs to match the
 		IDs in the JSON here
 	*/
-
 	//=======================================================================================================================================================================================================
 	//Actions
 	//===================
@@ -434,6 +436,9 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr, const 
 	LinkExpression(196, eIntArrayStringify);
 	LinkExpression(197, eFloatArrayStringify);
 	LinkExpression(198, eStringArrayStringify);
+	//===================
+	//Runtime
+	LinkExpression(199, eGetCurrentFrameName);
 	//=======================================================================================================================================================================================================
 
 	/*

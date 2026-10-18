@@ -32,7 +32,7 @@ public:
 	Edif::Runtime Runtime;
 
 	static const int MinimumBuild = 254;
-	static const int Version = 7;
+	static const int Version = 8;
 
 	// Warning: OEFLAGS/OEPREFS cannot be freely modified when you have used them in MFAs.
 	static constexpr OEFLAGS OEFLAGS = OEFLAGS::NONE;
@@ -491,6 +491,9 @@ public:
 	float eVect3z(const TCHAR* ID);
 	float eVect3M(const TCHAR* ID);
 	float eVect3Dot(const TCHAR* ID1, const TCHAR* ID2);
+	//===================
+	//Runtime
+	const TCHAR* eGetCurrentFrameName();
 	//=======================================================================================================================================================================================================
 	//Global Data
 	//Struct to store all global data elements

@@ -4,8 +4,8 @@
 
 namespace DeltaTime {
 	//Getters
-	float GetDeltaTimeF();
-	float GetDeltaTimeS();
+	float GetDeltaTimeF(RunHeader* rhPtr);
+	float GetDeltaTimeS(RunHeader* rhPtr);
 	float GetGameSpeed();
 	int GetOldTimer();
 	int GetTimeScale();

@@ -18,11 +18,11 @@ bool gameSpeedUpdateFlag = false;
 bool isPaused = false;
 //========================================================================
 //Getters
-float DeltaTime::GetDeltaTimeF() {
-	return deltaTime * gameSpeed;
+float DeltaTime::GetDeltaTimeF(RunHeader* rhPtr) {
+	return (rhPtr->rhTimerDelta * (timeScale / 1000.0f)) * gameSpeed;
 }
-float DeltaTime::GetDeltaTimeS() {
-	return (1.0f / (deltaTime * timeScale)) * gameSpeed;
+float DeltaTime::GetDeltaTimeS(RunHeader* rhPtr) {
+	return (rhPtr->rhTimerDelta / 1000.0f) * gameSpeed;
 }
 float DeltaTime::GetGameSpeed() {
 	return gameSpeed;

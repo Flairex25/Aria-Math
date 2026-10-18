@@ -301,7 +301,7 @@ float Extension::eGetBrightness(int color) {
 }
 //Get HEX
 const TCHAR* Extension::aGetHex(int color) {
-	return AriaColors::RGBtoHEX(AriaColors::GetRed(color), AriaColors::GetGreen(color), AriaColors::GetBlue(color));
+	return Runtime.CopyString(AriaColors::RGBtoHEX(AriaColors::GetRed(color), AriaColors::GetGreen(color), AriaColors::GetBlue(color)));
 }
 //=======================================================================================================================================================================================================
 //Other
@@ -376,19 +376,19 @@ int Extension::eTimeHours() { return AriaTime::GetHoursValue(); }
 int Extension::eTimeMinutes() { return AriaTime::GetMinutesValue(); }
 int Extension::eTimeSeconds() { return AriaTime::GetSecondsValue(); }
 int Extension::eTimeMilliseconds() { return AriaTime::GetMillisecondsValue(); }
-const TCHAR* Extension::eTimeHours$() { return AriaTime::GetHoursValue$(); }
-const TCHAR* Extension::eTimeMinutes$() { return AriaTime::GetMinutesValue$(); }
-const TCHAR* Extension::eTimeSeconds$() { return AriaTime::GetSecondsValue$(); }
-const TCHAR* Extension::eTimeMilliseconds$() { return AriaTime::GetMillisecondsValue$(); }
-const TCHAR* Extension::eTimeString$() { return AriaTime::GetTimeString(); }
+const TCHAR* Extension::eTimeHours$() { return Runtime.CopyString(AriaTime::GetHoursValue$()); }
+const TCHAR* Extension::eTimeMinutes$() { return Runtime.CopyString(AriaTime::GetMinutesValue$()); }
+const TCHAR* Extension::eTimeSeconds$() { return Runtime.CopyString(AriaTime::GetSecondsValue$()); }
+const TCHAR* Extension::eTimeMilliseconds$() { return Runtime.CopyString(AriaTime::GetMillisecondsValue$()); }
+const TCHAR* Extension::eTimeString$() { return Runtime.CopyString(AriaTime::GetTimeString()); }
 int Extension::eCurrentMonth() { return AriaTime::GetCurrentMonth(); }
 int Extension::eCurrentDay() { return AriaTime::GetCurrentDay(); }
 int Extension::eCurrentYear() { return AriaTime::GetCurrentYear(); }
-const TCHAR* Extension::eCurrentDate$() { return AriaTime::GetCurrentDate(); }
+const TCHAR* Extension::eCurrentDate$() { return Runtime.CopyString(AriaTime::GetCurrentDate()); }
 int Extension::eCurrentHours() { return AriaTime::GetCurrentHours(); }
 int Extension::eCurrentMinutes() { return AriaTime::GetCurrentMinutes(); }
 int Extension::eCurrentSeconds() { return AriaTime::GetCurrentSeconds(); }
-const TCHAR* Extension::eCurrentTime$() { return AriaTime::GetCurrentTimeString(); }
+const TCHAR* Extension::eCurrentTime$() { return Runtime.CopyString(AriaTime::GetCurrentTimeString()); }
 //=======================================================================================================================================================================================================
 //Randomization
 int Extension::eRandom0(int value) { return Math::RRandomI(0, Math::MaxI(value - 1, 0)); }
@@ -399,20 +399,23 @@ int Extension::eRandomizerIndex(const TCHAR* ID, int index) { return BagRandomiz
 int Extension::eRandomizerValue(const TCHAR* ID) { return BagRandomization::GetFromArray(ID)->GetRandomValue(); }
 //=======================================================================================================================================================================================================
 //Delta Time/Ticks
-float Extension::eDeltaTimeF() { return DeltaTime::GetDeltaTimeF(); }
-float Extension::eDeltaTimeS() { return DeltaTime::GetDeltaTimeS(); }
+float Extension::eDeltaTimeF() { return DeltaTime::GetDeltaTimeF(this->rhPtr); }
+float Extension::eDeltaTimeS() { return DeltaTime::GetDeltaTimeS(this->rhPtr); }
 float Extension::eGameSpeed() { return DeltaTime::GetGameSpeed(); }
 int Extension::eDeltaTimeBase() { return DeltaTime::GetTimeScale(); }
 int Extension::eTickRate() { return 0; }
-int Extension::eOldTimer() { return DeltaTime::GetOldTimer(); }
+int Extension::eOldTimer() {
+	MessageBoxA(NULL, "'a_OldTimer()' is a depracated expression! Please consider deleting it.", "AriaMath - Depracated Expression Notice", MB_OK);
+	return 0;
+}
 //=======================================================================================================================================================================================================
 //Functions
 int Extension::eFunctionIntParam(const TCHAR* functionID, const TCHAR* paramID) { return Functions::GetFromArray(functionID)->GetIntParam(paramID)->GetValue(); }
 float Extension::eFunctionFloatParam(const TCHAR* functionID, const TCHAR* paramID) { return Functions::GetFromArray(functionID)->GetFloatParam(paramID)->GetValue(); }
-const TCHAR* Extension::eFunctionStringParam(const TCHAR* functionID, const TCHAR* paramID) { return Functions::GetFromArray(functionID)->GetStringParam(paramID)->GetValue(); }
+const TCHAR* Extension::eFunctionStringParam(const TCHAR* functionID, const TCHAR* paramID) { return Runtime.CopyString(Functions::GetFromArray(functionID)->GetStringParam(paramID)->GetValue()); }
 int Extension::eFunctionIntReturn(const TCHAR* functionID) { return Functions::GetFromArray(functionID)->GetIntReturn(); }
 float Extension::eFunctionFloatReturn(const TCHAR* functionID) { return Functions::GetFromArray(functionID)->GetFloatReturn(); }
-const TCHAR* Extension::eFunctionStringReturn(const TCHAR* functionID) { return Functions::GetFromArray(functionID)->GetStringReturn(); }
+const TCHAR* Extension::eFunctionStringReturn(const TCHAR* functionID) { return Runtime.CopyString(Functions::GetFromArray(functionID)->GetStringReturn()); }
 int Extension::eFunctionLoopIndex(const TCHAR* functionID) { return Functions::GetFromArray(functionID)->GetLoopIndex(); }
 const TCHAR* Extension::eToFunctionParam(const TCHAR* paramID, const TCHAR* paramType, const TCHAR* paramValue) {
 
@@ -422,7 +425,7 @@ const TCHAR* Extension::eToFunctionParam(const TCHAR* paramID, const TCHAR* para
 
 	_stprintf_s(result, len, _T("%s-%s-%s"), paramID, paramType, paramValue);
 
-	return _tcsdup(result);
+	return Runtime.CopyString(result);
 };
 //=======================================================================================================================================================================================================
 //IntArrays
@@ -442,7 +445,7 @@ int Extension::eIntArrayValueAtLoopIndex(const TCHAR* arrayID) {
 	return arr[currentArray->GetLoopIndex()];
 }
 int Extension::eIntArraySize(const TCHAR* arrayID) { return IntegerArrays::GetFromArray(arrayID)->GetArray().size(); }
-const TCHAR* Extension::eIntArrayLoopID(const TCHAR* arrayID) { return IntegerArrays::GetFromArray(arrayID)->GetLoopID(); }
+const TCHAR* Extension::eIntArrayLoopID(const TCHAR* arrayID) { return Runtime.CopyString(IntegerArrays::GetFromArray(arrayID)->GetLoopID()); }
 const TCHAR* Extension::ePrintIntArray(const TCHAR* arrayID) {
 	std::vector<int> arr = IntegerArrays::GetFromArray(arrayID)->GetArray();
 	static std::basic_string<TCHAR> result;
@@ -457,7 +460,7 @@ const TCHAR* Extension::ePrintIntArray(const TCHAR* arrayID) {
 	}
 	stream << _T(" }");
 	result = stream.str();
-	return result.c_str();
+	return Runtime.CopyString(result.c_str());
 }
 const TCHAR* Extension::eIntArrayStringify(const TCHAR* arrayID, const TCHAR* delimiter) {
 	std::vector<int> arr = IntegerArrays::GetFromArray(arrayID)->GetArray();
@@ -471,7 +474,7 @@ const TCHAR* Extension::eIntArrayStringify(const TCHAR* arrayID, const TCHAR* de
 		stream << arr[i];
 	}
 	result = stream.str();
-	return result.c_str();
+	return Runtime.CopyString(result.c_str());
 }
 //FloatArrays
 float Extension::eFloatArrayValue(const TCHAR* arrayID, int index) {
@@ -490,7 +493,7 @@ float Extension::eFloatArrayValueAtLoopIndex(const TCHAR* arrayID) {
 	return arr[currentArray->GetLoopIndex()];
 }
 int Extension::eFloatArraySize(const TCHAR* arrayID) { return FloatArrays::GetFromArray(arrayID)->GetArray().size(); }
-const TCHAR* Extension::eFloatArrayLoopID(const TCHAR* arrayID) { return FloatArrays::GetFromArray(arrayID)->GetLoopID(); }
+const TCHAR* Extension::eFloatArrayLoopID(const TCHAR* arrayID) { return Runtime.CopyString(FloatArrays::GetFromArray(arrayID)->GetLoopID()); }
 const TCHAR* Extension::ePrintFloatArray(const TCHAR* arrayID) {
 	std::vector<float> arr = FloatArrays::GetFromArray(arrayID)->GetArray();
 	static std::basic_string<TCHAR> result;
@@ -505,7 +508,7 @@ const TCHAR* Extension::ePrintFloatArray(const TCHAR* arrayID) {
 	}
 	stream << _T(" }");
 	result = stream.str();
-	return result.c_str();
+	return Runtime.CopyString(result.c_str());
 }
 const TCHAR* Extension::eFloatArrayStringify(const TCHAR* arrayID, const TCHAR* delimiter) {
 	std::vector<float> arr = FloatArrays::GetFromArray(arrayID)->GetArray();
@@ -519,7 +522,7 @@ const TCHAR* Extension::eFloatArrayStringify(const TCHAR* arrayID, const TCHAR* 
 		stream << arr[i];
 	}
 	result = stream.str();
-	return result.c_str();
+	return Runtime.CopyString(result.c_str());
 }
 //StringArrays
 const TCHAR* Extension::eStringArrayValue(const TCHAR* arrayID, int index) {
@@ -528,14 +531,14 @@ const TCHAR* Extension::eStringArrayValue(const TCHAR* arrayID, int index) {
 	if (arr.size() == 0) { return 0; }
 	if (index >= arr.size()) { return 0; }
 	index = Math::MaxI(index, 0);
-	return arr[index];
+	return Runtime.CopyString(arr[index]);
 }
 int Extension::eStringArrayLoopIndex(const TCHAR* arrayID) { return StringArrays::GetFromArray(arrayID)->GetLoopIndex(); }
 const TCHAR* Extension::eStringArrayValueAtLoopIndex(const TCHAR* arrayID) {
 	StringArray* currentArray = StringArrays::GetFromArray(arrayID);
 	std::vector<const TCHAR*> arr = currentArray->GetArray();
 	if (arr.size() == 0) { return 0; }
-	return arr[currentArray->GetLoopIndex()];
+	return Runtime.CopyString(arr[currentArray->GetLoopIndex()]);
 }
 int Extension::eStringArraySize(const TCHAR* arrayID) { return StringArrays::GetFromArray(arrayID)->GetArray().size(); }
 const TCHAR* Extension::eStringArrayLoopID(const TCHAR* arrayID) { return StringArrays::GetFromArray(arrayID)->GetLoopID(); }
@@ -551,7 +554,7 @@ const TCHAR* Extension::ePrintStringArray(const TCHAR* arrayID) {
 		result += arr[i];
 	}
 	result += _T(" }");
-	return result.c_str();
+	return Runtime.CopyString(result.c_str());
 }
 const TCHAR* Extension::eStringArrayStringify(const TCHAR* arrayID, const TCHAR* delimiter) {
 	std::vector<const TCHAR*> arr = StringArrays::GetFromArray(arrayID)->GetArray();
@@ -563,7 +566,7 @@ const TCHAR* Extension::eStringArrayStringify(const TCHAR* arrayID, const TCHAR*
 		}
 		result += arr[i];
 	}
-	return result.c_str();
+	return Runtime.CopyString(result.c_str());
 }
 //=======================================================================================================================================================================================================
 //Vector2
@@ -624,5 +627,10 @@ float Extension::eVect3Dot(const TCHAR* ID1, const TCHAR* ID2) {
 	float y2 = currentVector2->GetY();
 	float z2 = currentVector2->GetZ();
 	return (x1 * x2 + y1 * y2 + z1 * z2);
+}
+//=======================================================================================================================================================================================================
+//Runtime
+const TCHAR* Extension::eGetCurrentFrameName() {
+	return Runtime.CopyString(this->rhPtr->get_App()->get_Frame()->get_name());
 }
 //=======================================================================================================================================================================================================

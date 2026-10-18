@@ -44,15 +44,15 @@
 				//[ 6, "Enable Ticks" ],
 				//[ 7, "Disable Ticks" ],
 				//"---",
-				[ 8, "Calculate Delta Time" ],
+				//[ 8, "Calculate Delta Time" ],
 				[ 9, "Set Delta Time Base" ],
 				"---",
 				[ 10, "Set Game Speed" ],
 				[ 11, "Pause Game Speed" ],
 				[ 12, "Resume Game Speed" ],
-				"---",
+				"---"
 				//[ 13, "Set Tick Rate" ],
-				[ 14, "Set Old Timer" ]
+				//[ 14, "Set Old Timer" ]
 			],
 			"---",
 			//=============================================
@@ -560,7 +560,7 @@
 				"---",
 				[ 153, "Get Delta Time Base" ],
 				//[ 154, "Get Tick Rate" ],
-				[ 155, "Get Old Timer" ]
+				//[ 155, "Get Old Timer" ]
 			],
 			"---",
 			//=============================================
@@ -644,7 +644,15 @@
 				[ 191, "Get Magnitude of 3D Vector" ],
 				[ 192, "Get Dot Product of 3D Vector" ]
 			],
+			"---",
+			//=============================================
+			//Runtime
+			[
+				"Runtime",
+				[ 199, "Get Name of Current Frame" ]
+			],
 			"---"
+
 		],
 		//====================================================================================================================================================================
 		//ACTIONS
@@ -707,7 +715,7 @@
 			}, //7
 			//======
 			{
-				"Title": "Calculate Delta Time",
+				"Title": "[DELETE THIS ACTION] Calculate Delta Time",
 				"Parameters": [
 					[ "Integer", "Timer" ]
 				]
@@ -742,7 +750,7 @@
 				]
 			}, //13
 			{
-				"Title": "Set Old Timer to: %0ms",
+				"Title": "[DELETE THIS ACTION] Set Old Timer to: %0ms",
 				"Parameters": [
 					[ "Integer", "Old Timer" ]
 				]
@@ -3082,7 +3090,14 @@
 					[ "String", "Array ID" ],
 					[ "String", "Delimiter" ]
 				]
-			} //198
+			}, //198
+			//=============================================
+			//Runtime, Get Frame Name
+			{
+				"Title": "a_CurrentFrameName(",
+				"Returns": "String",
+				"Parameters": []
+			} //199
 		],
 		"Properties": [
 			{
