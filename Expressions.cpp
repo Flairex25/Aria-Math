@@ -634,3 +634,8 @@ const TCHAR* Extension::eGetCurrentFrameName() {
 	return Runtime.CopyString(this->rhPtr->get_App()->get_Frame()->get_name());
 }
 //=======================================================================================================================================================================================================
+//Constants
+int Extension::eGetConstInt(const TCHAR* ID) { return Constants::ConstInt::GetFromArray(ID)->GetValue(); }
+float Extension::eGetConstFloat(const TCHAR* ID) { return Constants::ConstFloat::GetFromArray(ID)->GetValue(); }
+const TCHAR* Extension::eGetConstString(const TCHAR* ID) { return Runtime.CopyString(Constants::ConstString::GetFromArray(ID)->GetValue()); }
+//=======================================================================================================================================================================================================

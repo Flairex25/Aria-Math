@@ -139,6 +139,15 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr, const 
 	LinkAction(90, aLerpVector3);
 	//Randomization
 	LinkAction(91, aSetRandomSeed);
+	//Editor
+	LinkAction(92, aComment);
+	//Constants
+	LinkAction(93, aSetConstInt);
+	LinkAction(94, aSetConstFloat);
+	LinkAction(95, aSetConstString);
+	LinkAction(96, aDeleteConstInt);
+	LinkAction(97, aDeleteConstFloat);
+	LinkAction(98, aDeleteConstString);
 	//=======================================================================================================================================================================================================
 	//Conditions
 	//===================
@@ -176,6 +185,9 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr, const 
 	LinkCondition(22, cIsRunningInEditor);
 	LinkCondition(23, cIsRunningInSubApplication);
 	LinkCondition(24, cImmediateAlways);
+	//===================
+	//Editor
+	LinkCondition(25, cComment);
 	//=======================================================================================================================================================================================================
 	//Expressions
 	//===================
@@ -439,6 +451,11 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr, const 
 	//===================
 	//Runtime
 	LinkExpression(199, eGetCurrentFrameName);
+	//===================
+	//Constants
+	LinkExpression(200, eGetConstInt);
+	LinkExpression(201, eGetConstFloat);
+	LinkExpression(202, eGetConstString);
 	//=======================================================================================================================================================================================================
 
 	/*

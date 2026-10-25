@@ -27,6 +27,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\AriaStrings.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\AriaTime.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\BagRandomizer.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\Constants.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\DeltaTime.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\FloatArrays.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)AriaMath\Functions.hpp" />
@@ -52,6 +53,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\AriaStrings.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\AriaTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\BagRandomizer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\Constants.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\DeltaTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\FloatArrays.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)AriaMath\Functions.cpp" />

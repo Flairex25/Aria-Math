@@ -196,6 +196,26 @@
 				[ 89, "Divide 2 3D Vectors" ],
 				[ 90, "Lerp Between 2 3D Vectors" ]
 			],
+			"---",
+			//=============================================
+			//Editor
+			[
+				"Editor",
+				[ 92, "Write Comment" ]
+			],
+			"---",
+			//=============================================
+			//Constants
+			[
+				"Constants",
+				[ 93, "Set Integer Constant" ],
+				[ 94, "Set Float Constant" ],
+				[ 95, "Set String Constant" ],
+				"---",
+				[ 96, "Delete Integer Constant" ],
+				[ 97, "Delete Float Constant" ],
+				[ 98, "Delete String Constant" ]
+			],
 			"---"
 			//=============================================
 		],
@@ -264,7 +284,14 @@
 				"Runtime",
 				[ 22, "Is Running in Editor" ],
 				[ 23, "Is Running in Sub-Application" ],
-				[ 24, "Immediate Always"]
+				[ 24, "Immediate Always" ]
+			],
+			"---",
+			//=============================================
+			//Editor
+			[
+				"Editor",
+				[ 25, "Write Comment" ]
 			],
 			"---"
 			//=============================================
@@ -276,7 +303,7 @@
 			//=============================================
 			//Constants
 			[
-				"Constants",
+				"Mathematical Constants",
 				[ 0, "e" ],
 				[ 1, "pi" ],
 				[ 2, "tau" ],
@@ -558,7 +585,7 @@
 				"---",
 				[ 152, "Get Game Speed" ],
 				"---",
-				[ 153, "Get Delta Time Base" ],
+				[ 153, "Get Delta Time Base" ]
 				//[ 154, "Get Tick Rate" ],
 				//[ 155, "Get Old Timer" ]
 			],
@@ -578,6 +605,15 @@
 				[ 162, "Get Loop Index of Function" ]
 				//"---",
 				//[ 163, "Format Function Parameter" ]
+			],
+			"---",
+			//=============================================
+			//Constants
+			[
+				"Constants",
+				[ 200, "Get Integer Constant" ],
+				[ 201, "Get Float Constant" ],
+				[ 202, "Get String Constant" ]
 			],
 			"---",
 			//=============================================
@@ -652,7 +688,7 @@
 				[ 199, "Get Name of Current Frame" ]
 			],
 			"---"
-
+			//=============================================
 		],
 		//====================================================================================================================================================================
 		//ACTIONS
@@ -661,7 +697,7 @@
 			//=============================================
 			//Time Formatting
 			{
-				"Title": "Format Time String: %0",
+				"Title": "%o : Format Time String: %0",
 				"Parameters": [
 					[ "Integer", "Time (Milliseconds)" ]
 				]
@@ -669,33 +705,33 @@
 			//=============================================
 			//Randomization
 			{
-				"Title": "Create Bag Randomizer: %0",
+				"Title": "%o : Create Bag Randomizer: %0",
 				"Parameters": [
 					[ "String", "Randomizer ID" ]
 				]
 			}, //1
 			{
-				"Title": "Reset Bag Randomizer: %0",
+				"Title": "%o : Reset Bag Randomizer: %0",
 				"Parameters": [
 					[ "String", "Randomizer ID" ]
 				]
 			}, //2
 			{
-				"Title": "Delete Bag Randomizer: %0",
+				"Title": "%o : Delete Bag Randomizer: %0",
 				"Parameters": [
 					[ "String", "Randomizer ID" ]
 				]
 			}, //3
 			//======
 			{
-				"Title": "Add Value %1 Bag Randomizer: %0",
+				"Title": "%o : Add Value %1 Bag Randomizer: %0",
 				"Parameters": [
 					[ "String", "Randomizer ID" ],
 					[ "Integer", "Value" ]
 				]
 			}, //4
 			{
-				"Title": "Delete Index %1 from Bag Randomizer: %0",
+				"Title": "%o : Delete Index %1 from Bag Randomizer: %0",
 				"Parameters": [
 					[ "String", "Randomizer ID" ],
 					[ "Integer", "Index" ]
@@ -704,53 +740,53 @@
 			//=============================================
 			//Delta Time/Ticks
 			{
-				"Title": "Enable Ticks",
+				"Title": "%o : Enable Ticks",
 				"Parameters": [
 				]
 			}, //6
 			{
-				"Title": "Disable Ticks",
+				"Title": "%o : Disable Ticks",
 				"Parameters": [
 				]
 			}, //7
 			//======
 			{
-				"Title": "[DELETE THIS ACTION] Calculate Delta Time",
+				"Title": "%o : [DELETE THIS ACTION] Calculate Delta Time",
 				"Parameters": [
 					[ "Integer", "Timer" ]
 				]
 			}, //8
 			{
-				"Title": "Set Delta Time Base to: %0FPS",
+				"Title": "%o : Set Delta Time Base to: %0FPS",
 				"Parameters": [
 					[ "Integer", "Base FPS" ]
 				]
 			}, //9
 			{
-				"Title": "Set Game Speed to: %0",
+				"Title": "%o : Set Game Speed to: %0",
 				"Parameters": [
 					[ "Float", "Game Speed" ]
 				]
 			}, //10
 			{
-				"Title": "Pause Game Speed",
+				"Title": "%o : Pause Game Speed",
 				"Parameters": [
 				]
 			}, //11
 			{
-				"Title": "Resume Game Speed",
+				"Title": "%o : Resume Game Speed",
 				"Parameters": [
 				]
 			}, //12
 			//======
 			{
-				"Title": "Set Tick Rate to: %0ms",
+				"Title": "%o : Set Tick Rate to: %0ms",
 				"Parameters": [
 					[ "Integer", "Tick Rame" ]
 				]
 			}, //13
 			{
-				"Title": "[DELETE THIS ACTION] Set Old Timer to: %0ms",
+				"Title": "%o : [DELETE THIS ACTION] Set Old Timer to: %0ms",
 				"Parameters": [
 					[ "Integer", "Old Timer" ]
 				]
@@ -758,7 +794,7 @@
 			//=============================================
 			//Function Parameters
 			{
-				"Title": "Set Function %0 Integer Parameter %1 to: %2",
+				"Title": "%o : Set Function %0 Integer Parameter %1 to: %2",
 				"Parameters": [
 					[ "String", "Function ID" ],
 					[ "String", "Parameter" ],
@@ -766,7 +802,7 @@
 				]
 			}, //15
 			{
-				"Title": "Set Function %0 Float Parameter %1 to: %2",
+				"Title": "%o : Set Function %0 Float Parameter %1 to: %2",
 				"Parameters": [
 					[ "String", "Function ID" ],
 					[ "String", "Parameter" ],
@@ -774,7 +810,7 @@
 				]
 			}, //16
 			{
-				"Title": "Set Function %0 String Parameter %1 to: %2",
+				"Title": "%o : Set Function %0 String Parameter %1 to: %2",
 				"Parameters": [
 					[ "String", "Function ID" ],
 					[ "String", "Parameter" ],
@@ -783,21 +819,21 @@
 			}, //17
 			//Function Returns
 			{
-				"Title": "Set Function %0 Integer Return to: %1",
+				"Title": "%o : Set Function %0 Integer Return to: %1",
 				"Parameters": [
 					[ "String", "Function ID" ],
 					[ "Integer", "Value" ]
 				]
 			}, //18
 			{
-				"Title": "Set Function %0 Float Return to: %1",
+				"Title": "%o : Set Function %0 Float Return to: %1",
 				"Parameters": [
 					[ "String", "Function ID" ],
 					[ "Float", "Value" ]
 				]
 			}, //19
 			{
-				"Title": "Set Function %0 String Return to: %1",
+				"Title": "%o : Set Function %0 String Return to: %1",
 				"Parameters": [
 					[ "String", "Function ID" ],
 					[ "String", "Value" ]
@@ -805,14 +841,14 @@
 			}, //20
 			//Functions
 			{
-				"Title": "Call Function: %0 (Immediately Delete = %1)",
+				"Title": "%o : Call Function: %0 (Immediately Delete = %1)",
 				"Parameters": [
 					[ "String", "Function ID" ],
 					[ "Integer", "Delete Params? (Leave 0 if unsure)" ]
 				]
 			}, //21
 			{
-				"Title": "Call Function: %0 %1 times (Immediately Delete = %2)",
+				"Title": "%o : Call Function: %0 %1 times (Immediately Delete = %2)",
 				"Parameters": [
 					[ "String", "Function ID" ],
 					[ "Integer", "Loop Amount" ],
@@ -820,7 +856,7 @@
 				]
 			}, //22
 			{
-				"Title": "Call Function: %0 with params %2, %3, %4, %5, %6, (Immediately Delete = %1)",
+				"Title": "%o : Call Function: %0 with params %2, %3, %4, %5, %6, (Immediately Delete = %1)",
 				"Parameters": [
 					[ "String", "Function ID" ],
 					[ "Integer", "Delete Params? (Leave 0 if unsure)" ],
@@ -832,20 +868,20 @@
 				]
 			}, //23
 			{
-				"Title": "Resume Function Loop: %0 (Immediately Delete = %1)",
+				"Title": "%o : Resume Function Loop: %0 (Immediately Delete = %1)",
 				"Parameters": [
 					[ "String", "Function ID" ],
 					[ "Integer", "Delete Params? (Leave 0 if unsure)" ]
 				]
 			}, //24
 			{
-				"Title": "Stop Function Loop: %0",
+				"Title": "%o : Stop Function Loop: %0",
 				"Parameters": [
 					[ "String", "Function ID" ]
 				]
 			}, //25
 			{
-				"Title": "Set Loop Index of Function: %0 to %1",
+				"Title": "%o : Set Loop Index of Function: %0 to %1",
 				"Parameters": [
 					[ "String", "Function ID" ],
 					[ "Integer", "Index (Starts at 0)" ]
@@ -854,20 +890,20 @@
 			//=============================================
 			//Integer Arrays
 			{
-				"Title": "Create IntArray: %0",
+				"Title": "%o : Create IntArray: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //27
 			{
-				"Title": "Delete IntArray: %0",
+				"Title": "%o : Delete IntArray: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //28
 			//======
 			{
-				"Title": "Set IntArray %0 [%1] to: %2",
+				"Title": "%o : Set IntArray %0 [%1] to: %2",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "Integer", "Index (Starts at 0)" ],
@@ -875,7 +911,7 @@
 				]
 			}, //29
 			{
-				"Title": "Delete IntArray %0 [%1]",
+				"Title": "%o : Delete IntArray %0 [%1]",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "Integer", "Index (Starts at 0)" ]
@@ -883,33 +919,33 @@
 			}, //30
 			//======
 			{
-				"Title": "Sort IntArray %0 in Ascending order",
+				"Title": "%o : Sort IntArray %0 in Ascending order",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //31
 			{
-				"Title": "Sort IntArray %0 in Descending order",
+				"Title": "%o : Sort IntArray %0 in Descending order",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //32
 			//======
 			{
-				"Title": "Loop Through IntArray: %0",
+				"Title": "%o : Loop Through IntArray: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //33
 			{
-				"Title": "Loop Through IntArray: %0 in reverse",
+				"Title": "%o : Loop Through IntArray: %0 in reverse",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //34
 			//======
 			{
-				"Title": "Set IntArray %0 Loop ID to: %1",
+				"Title": "%o : Set IntArray %0 Loop ID to: %1",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "String", "Loop ID" ]
@@ -917,7 +953,7 @@
 			}, //35
 			//======
 			{
-				"Title": "Parse String %1 into IntArray: %0 with delimiter %2",
+				"Title": "%o : Parse String %1 into IntArray: %0 with delimiter %2",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "String", "String" ],
@@ -926,19 +962,19 @@
 			}, //36
 			//======
 			{
-				"Title": "Resume IntArray Loop: %0",
+				"Title": "%o : Resume IntArray Loop: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //37
 			{
-				"Title": "Stop IntArray Loop: %0",
+				"Title": "%o : Stop IntArray Loop: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //38
 			{
-				"Title": "Set IntArray Loop %0 index to: %1",
+				"Title": "%o : Set IntArray Loop %0 index to: %1",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "Integer", "Loop Index (Starts at 0)" ]
@@ -946,20 +982,20 @@
 			}, //39
 			//Float Arrays
 			{
-				"Title": "Create FloatArray: %0",
+				"Title": "%o : Create FloatArray: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //40
 			{
-				"Title": "Delete FloatArray: %0",
+				"Title": "%o : Delete FloatArray: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //41
 			//======
 			{
-				"Title": "Set FloatArray %0 [%1] to: %2",
+				"Title": "%o : Set FloatArray %0 [%1] to: %2",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "Integer", "Index (Starts at 0)" ],
@@ -967,7 +1003,7 @@
 				]
 			}, //42
 			{
-				"Title": "Delete FloatArray %0 [%1]",
+				"Title": "%o : Delete FloatArray %0 [%1]",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "Integer", "Index (Starts at 0)" ]
@@ -975,33 +1011,33 @@
 			}, //43
 			//======
 			{
-				"Title": "Sort FloatArray: %0 in Ascending order",
+				"Title": "%o : Sort FloatArray: %0 in Ascending order",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //44
 			{
-				"Title": "Sort FloatArray: %0 in Descending order",
+				"Title": "%o : Sort FloatArray: %0 in Descending order",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //45
 			//======
 			{
-				"Title": "Loop Through FloatArray: %0",
+				"Title": "%o : Loop Through FloatArray: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //46
 			{
-				"Title": "Loop Through FloatArray: %0 in reverse",
+				"Title": "%o : Loop Through FloatArray: %0 in reverse",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //47
 			//======
 			{
-				"Title": "Set FloatArray %0 Loop ID to: %1",
+				"Title": "%o : Set FloatArray %0 Loop ID to: %1",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "String", "Loop ID" ]
@@ -1009,7 +1045,7 @@
 			}, //48
 			//======
 			{
-				"Title": "Parse String %1 into FloatArray: %0 with delimiter %2",
+				"Title": "%o : Parse String %1 into FloatArray: %0 with delimiter %2",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "String", "String" ],
@@ -1018,19 +1054,19 @@
 			}, //49
 			//======
 			{
-				"Title": "Resume FloatArray Loop: %0",
+				"Title": "%o : Resume FloatArray Loop: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //50
 			{
-				"Title": "Stop FloatArray Loop: %0",
+				"Title": "%o : Stop FloatArray Loop: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //51
 			{
-				"Title": "Set FloatArray Loop %0 index to: %1",
+				"Title": "%o : Set FloatArray Loop %0 index to: %1",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "Integer", "Loop Index (Starts at 0)" ]
@@ -1038,20 +1074,20 @@
 			}, //52
 			//String Arrays
 			{
-				"Title": "Create String Array: %0",
+				"Title": "%o : Create String Array: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //53
 			{
-				"Title": "Delete String Array: %0",
+				"Title": "%o : Delete String Array: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //54
 			//======
 			{
-				"Title": "Set StringArray %0 [%1] to: %2",
+				"Title": "%o : Set StringArray %0 [%1] to: %2",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "Integer", "Index (Starts at 0)" ],
@@ -1059,7 +1095,7 @@
 				]
 			}, //55
 			{
-				"Title": "Delete StringArray %0 [%1]",
+				"Title": "%o : Delete StringArray %0 [%1]",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "Integer", "Index (Starts at 0)" ]
@@ -1067,45 +1103,45 @@
 			}, //56
 			//======
 			{
-				"Title": "Sort StringArray: %0 by string length in Ascending order",
+				"Title": "%o : Sort StringArray: %0 by string length in Ascending order",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //57
 			{
-				"Title": "Sort StringArray: %0 by string length in Descending order",
+				"Title": "%o : Sort StringArray: %0 by string length in Descending order",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //58
 			{
-				"Title": "Sort StringArray: %0 by alphabetical order in Ascending order",
+				"Title": "%o : Sort StringArray: %0 by alphabetical order in Ascending order",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //59
 			{
-				"Title": "Sort StringArray: %0 by alphabetical order in Descending order",
+				"Title": "%o : Sort StringArray: %0 by alphabetical order in Descending order",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //60
 			//======
 			{
-				"Title": "Loop Through StringArray: %0",
+				"Title": "%o : Loop Through StringArray: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //61
 			{
-				"Title": "Loop Through StringArray: %0 in reverse",
+				"Title": "%o : Loop Through StringArray: %0 in reverse",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //62
 			//======
 			{
-				"Title": "Set StringArray %0 Loop ID to: %1",
+				"Title": "%o : Set StringArray %0 Loop ID to: %1",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "String", "Loop ID" ]
@@ -1113,7 +1149,7 @@
 			}, //63
 			//======
 			{
-				"Title": "Parse String %1 into StringArray: %0 with delimiter %2",
+				"Title": "%o : arse String %1 into StringArray: %0 with delimiter %2",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "String", "String" ],
@@ -1122,19 +1158,19 @@
 			}, //64
 			//======
 			{
-				"Title": "Resume StringArray Loop: %0",
+				"Title": "%o : Resume StringArray Loop: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //65
 			{
-				"Title": "Stop StringArray Loop: %0",
+				"Title": "%o : Stop StringArray Loop: %0",
 				"Parameters": [
 					[ "String", "Array ID" ]
 				]
 			}, //66
 			{
-				"Title": "Set StringArray Loop %0 index to: %1",
+				"Title": "%o : Set StringArray Loop %0 index to: %1",
 				"Parameters": [
 					[ "String", "Array ID" ],
 					[ "Integer", "Loop Index (Starts at 0)" ]
@@ -1143,7 +1179,7 @@
 			//=============================================
 			//Vector2
 			{
-				"Title": "Set 2D Vector: %0 (%1, %2)",
+				"Title": "%o : Set 2D Vector: %0 (%1, %2)",
 				"Parameters": [
 					[ "String", "Vector ID" ],
 					[ "Float", "X Value" ],
@@ -1151,21 +1187,21 @@
 				]
 			}, //68
 			{
-				"Title": "Delete 2D Vector: %0",
+				"Title": "%o : Delete 2D Vector: %0",
 				"Parameters": [
 					[ "String", "Vector ID" ]
 				]
 			}, //69
 			//======
 			{
-				"Title": "Set X of Vector2(%0) to: %1",
+				"Title": "%o : Set X of Vector2(%0) to: %1",
 				"Parameters": [
 					[ "String", "Vector ID" ],
 					[ "Float", "Value" ]
 				]
 			}, //70
 			{
-				"Title": "Set Y of Vector2(%0) to: %1",
+				"Title": "%o : Set Y of Vector2(%0) to: %1",
 				"Parameters": [
 					[ "String", "Vector ID" ],
 					[ "Float", "Value" ]
@@ -1173,7 +1209,7 @@
 			}, //71
 			//======
 			{
-				"Title": "Set Vector2(%2) to Vector2(%0) x %1",
+				"Title": "%o : Set Vector2(%2) to Vector2(%0) x %1",
 				"Parameters": [
 					[ "String", "Vector ID" ],
 					[ "Float", "Scalar" ],
@@ -1181,14 +1217,14 @@
 				]
 			}, //72
 			{
-				"Title": "Set Vector2(%1) to the Unit of Vector2(%0)",
+				"Title": "%o : Set Vector2(%1) to the Unit of Vector2(%0)",
 				"Parameters": [
 					[ "String", "Vector ID" ],
 					[ "String", "New Vector ID" ]
 				]
 			}, //73
 			{
-				"Title": "Set Vector2(%2) to Vector2(%0) + Vector2(%1)",
+				"Title": "%o : Set Vector2(%2) to Vector2(%0) + Vector2(%1)",
 				"Parameters": [
 					[ "String", "Vector ID 1" ],
 					[ "String", "Vector ID 2" ],
@@ -1196,7 +1232,7 @@
 				]
 			}, //74
 			{
-				"Title": "Set Vector2(%2) to Vector2(%0) - Vector2(%1)",
+				"Title": "%o : Set Vector2(%2) to Vector2(%0) - Vector2(%1)",
 				"Parameters": [
 					[ "String", "Vector ID 1" ],
 					[ "String", "Vector ID 2" ],
@@ -1204,7 +1240,7 @@
 				]
 			}, //75
 			{
-				"Title": "Set Vector2(%2) to Vector2(%0) * Vector2(%1)",
+				"Title": "%o : Set Vector2(%2) to Vector2(%0) * Vector2(%1)",
 				"Parameters": [
 					[ "String", "Vector ID 1" ],
 					[ "String", "Vector ID 2" ],
@@ -1212,7 +1248,7 @@
 				]
 			}, //76
 			{
-				"Title": "Set Vector2(%2) to Vector2(%0) / Vector2(%1)",
+				"Title": "%o : Set Vector2(%2) to Vector2(%0) / Vector2(%1)",
 				"Parameters": [
 					[ "String", "Vector ID 1" ],
 					[ "String", "Vector ID 2" ],
@@ -1220,7 +1256,7 @@
 				]
 			}, //77
 			{
-				"Title": "Set Vector2(%3) to Lerp( Vector2(%0), Vector2(%1), %2 )",
+				"Title": "%o : Set Vector2(%3) to Lerp( Vector2(%0), Vector2(%1), %2 )",
 				"Parameters": [
 					[ "String", "Vector ID 1" ],
 					[ "String", "Vector ID 2" ],
@@ -1230,7 +1266,7 @@
 			}, //78
 			//Vector3
 			{
-				"Title": "Set 3D Vector: %0 (%1, %2, %3)",
+				"Title": "%o : Set 3D Vector: %0 (%1, %2, %3)",
 				"Parameters": [
 					[ "String", "Vector ID" ],
 					[ "Float", "X Value" ],
@@ -1239,28 +1275,28 @@
 				]
 			}, //79
 			{
-				"Title": "Delete 3D Vector: %0",
+				"Title": "%o : Delete 3D Vector: %0",
 				"Parameters": [
 					[ "String", "Vector ID" ]
 				]
 			}, //80
 			//======
 			{
-				"Title": "Set X of Vector3(%0) to: %1",
+				"Title": "%o : Set X of Vector3(%0) to: %1",
 				"Parameters": [
 					[ "String", "Vector ID" ],
 					[ "Float", "Value" ]
 				]
 			}, //81
 			{
-				"Title": "Set Y of Vector3(%0) to: %1",
+				"Title": "%o : Set Y of Vector3(%0) to: %1",
 				"Parameters": [
 					[ "String", "Vector ID" ],
 					[ "Float", "Value" ]
 				]
 			}, //82
 			{
-				"Title": "Set Z of Vector3(%0) to: %1",
+				"Title": "%o : Set Z of Vector3(%0) to: %1",
 				"Parameters": [
 					[ "String", "Vector ID" ],
 					[ "Float", "Value" ]
@@ -1268,7 +1304,7 @@
 			}, //83
 			//======
 			{
-				"Title": "Set Vector3(%2) to Vector3(%0) x %1",
+				"Title": "%o : Set Vector3(%2) to Vector3(%0) x %1",
 				"Parameters": [
 					[ "String", "Vector ID" ],
 					[ "Float", "Scalar" ],
@@ -1276,14 +1312,14 @@
 				]
 			}, //84
 			{
-				"Title": "Set Vector3(%1) to the Unit of Vector3(%0)",
+				"Title": "%o : Set Vector3(%1) to the Unit of Vector3(%0)",
 				"Parameters": [
 					[ "String", "Vector ID" ],
 					[ "String", "New Vector ID" ]
 				]
 			}, //85
 			{
-				"Title": "Set Vector3(%2) to Vector3(%0) + Vector3(%1)",
+				"Title": "%o : Set Vector3(%2) to Vector3(%0) + Vector3(%1)",
 				"Parameters": [
 					[ "String", "Vector ID 1" ],
 					[ "String", "Vector ID 2" ],
@@ -1291,7 +1327,7 @@
 				]
 			}, //86
 			{
-				"Title": "Set Vector3(%2) to Vector3(%0) - Vector3(%1)",
+				"Title": "%o : Set Vector3(%2) to Vector3(%0) - Vector3(%1)",
 				"Parameters": [
 					[ "String", "Vector ID 1" ],
 					[ "String", "Vector ID 2" ],
@@ -1299,7 +1335,7 @@
 				]
 			}, //87
 			{
-				"Title": "Set Vector3(%2) to Vector3(%0) * Vector3(%1)",
+				"Title": "%o : Set Vector3(%2) to Vector3(%0) * Vector3(%1)",
 				"Parameters": [
 					[ "String", "Vector ID 1" ],
 					[ "String", "Vector ID 2" ],
@@ -1307,7 +1343,7 @@
 				]
 			}, //88
 			{
-				"Title": "Set Vector3(%2) to Vector3(%0) / Vector3(%1)",
+				"Title": "%o : Set Vector3(%2) to Vector3(%0) / Vector3(%1)",
 				"Parameters": [
 					[ "String", "Vector ID 1" ],
 					[ "String", "Vector ID 2" ],
@@ -1315,7 +1351,7 @@
 				]
 			}, //89
 			{
-				"Title": "Set Vector3(%3) to Lerp( Vector3(%0), Vector3(%1), %2 )",
+				"Title": "%o : Set Vector3(%3) to Lerp( Vector3(%0), Vector3(%1), %2 )",
 				"Parameters": [
 					[ "String", "Vector ID 1" ],
 					[ "String", "Vector ID 2" ],
@@ -1326,11 +1362,61 @@
 			//=============================================
 			//Randomization
 			{
-				"Title": "Set Random Seed to: %0",
+				"Title": "%o : Set Random Seed to: %0",
 				"Parameters": [
 					[ "Integer", "Random Seed (0 = random)" ]
 				]
-			} //91
+			}, //91
+			//=============================================
+			//Editor
+			{
+				"Title": "// %0",
+				"Parameters": [
+					[ "String", "Write Comment Here:" ]
+				]
+			}, //92
+			//=============================================
+			//Constants
+			{
+				"Title": "%o : const int %0 = %1",
+				"Parameters": [
+					[ "String", "Name" ],
+					[ "Integer", "Value" ]
+				]
+			}, //93
+			{
+				"Title": "%o : const float %0 = %1",
+				"Parameters": [
+					[ "String", "Name" ],
+					[ "Float", "Value" ]
+				]
+			}, //94
+			{
+				"Title": "%o : const string %0 = %1",
+				"Parameters": [
+					[ "String", "Name" ],
+					[ "String", "Value" ]
+				]
+			}, //95
+			//===
+			{
+				"Title": "%o : Delete const int %0",
+				"Parameters": [
+					[ "String", "Name" ]
+				]
+			}, //96
+			{
+				"Title": "%o : Delete const float %0",
+				"Parameters": [
+					[ "String", "Name" ]
+				]
+			}, //97
+			{
+				"Title": "%o : Delete const string %0",
+				"Parameters": [
+					[ "String", "Name" ]
+				]
+			} //98
 		],
 		//====================================================================================================================================================================
 		//CONDITIONS
@@ -1526,7 +1612,16 @@
 				"Triggered": true,
 				"Parameters": [
 				]
-			} //24
+			}, //24
+			//=============================================
+			//Editor
+			{
+				"Title": "// %0",
+				"Triggered": false,
+				"Parameters": [
+					[ "String", "Comment" ]
+				]
+			} //25
 			//=============================================
 		],
 		//====================================================================================================================================================================
@@ -3097,7 +3192,30 @@
 				"Title": "a_CurrentFrameName(",
 				"Returns": "String",
 				"Parameters": []
-			} //199
+			}, //199
+			//=============================================
+			//Constants
+			{
+				"Title": "a_ConstInt(",
+				"Returns": "Integer",
+				"Parameters": [
+					[ "String", "Name" ]
+				]
+			}, //200
+			{
+				"Title": "a_ConstFloat(",
+				"Returns": "Float",
+				"Parameters": [
+					[ "String", "Name" ]
+				]
+			}, //201
+			{
+				"Title": "a_ConstString(",
+				"Returns": "String",
+				"Parameters": [
+					[ "String", "Name" ]
+				]
+			} //202
 		],
 		"Properties": [
 			{

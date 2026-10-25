@@ -13,6 +13,7 @@
 #include "AriaMath\AriaTime.hpp"
 #include "AriaMath\AriaStrings.hpp"
 #include "AriaMath\AriaColors.hpp"
+#include "AriaMath\Constants.hpp"
 
 class Extension final
 {
@@ -32,7 +33,7 @@ public:
 	Edif::Runtime Runtime;
 
 	static const int MinimumBuild = 254;
-	static const int Version = 8;
+	static const int Version = 9;
 
 	// Warning: OEFLAGS/OEPREFS cannot be freely modified when you have used them in MFAs.
 	static constexpr OEFLAGS OEFLAGS = OEFLAGS::NONE;
@@ -197,6 +198,15 @@ public:
 	void aMultiplyVector3(const TCHAR* vectorID1, const TCHAR* vectorID2, const TCHAR* newVectorID);
 	void aDivideVector3(const TCHAR* vectorID1, const TCHAR* vectorID2, const TCHAR* newVectorID);
 	void aLerpVector3(const TCHAR* vectorID1, const TCHAR* vectorID2, float lerpAmount, const TCHAR* newVectorID);
+	//Editor
+	void aComment(const TCHAR* comment);
+	//Constants
+	void aSetConstInt(const TCHAR* ID, int value);
+	void aSetConstFloat(const TCHAR* ID, float value);
+	void aSetConstString(const TCHAR* ID, const TCHAR* value);
+	void aDeleteConstInt(const TCHAR* ID);
+	void aDeleteConstFloat(const TCHAR* ID);
+	void aDeleteConstString(const TCHAR* ID);
 	//=======================================================================================================================================================================================================
 	//Conditions
 	//===================
@@ -234,6 +244,9 @@ public:
 	bool cIsRunningInEditor();
 	bool cIsRunningInSubApplication();
 	bool cImmediateAlways();
+	//===================
+	//Editor
+	bool cComment(const TCHAR* comment);
 	//=======================================================================================================================================================================================================
 	//Expressions
 	//===================
@@ -494,6 +507,11 @@ public:
 	//===================
 	//Runtime
 	const TCHAR* eGetCurrentFrameName();
+	//===================
+	//Constants
+	int eGetConstInt(const TCHAR* ID);
+	float eGetConstFloat(const TCHAR* ID);
+	const TCHAR* eGetConstString(const TCHAR* ID);
 	//=======================================================================================================================================================================================================
 	//Global Data
 	//Struct to store all global data elements

@@ -8,7 +8,7 @@ bool Extension::cOnTick() {
 };
 
 bool Extension::cIsGameSpeedPaused() {
-	return true;
+	return (DeltaTime::GetGameSpeed() == 0);
 };
 
 bool Extension::cOnGameSpeedPaused() {
@@ -167,6 +167,13 @@ bool Extension::cIsRunningInSubApplication() {
 }
 
 bool Extension::cImmediateAlways() {
+	return true;
+}
+
+//=======================================================================================================================================================================================================
+//Runtime
+
+bool Extension::cComment(const TCHAR* comment) {
 	return true;
 }
 

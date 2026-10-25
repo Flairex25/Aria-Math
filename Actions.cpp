@@ -76,11 +76,11 @@ void Extension::aSetGameSpeed(float gameSpeed) {
 }
 
 void Extension::aPauseGameSpeed() {
-	DeltaTime::SetGameSpeed(0.0f);
+	Extension::aSetGameSpeed(0.0f);
 }
 
 void Extension::aResumeGameSpeed() {
-	DeltaTime::SetGameSpeed(prePauseGameSpeed);
+	Extension::aSetGameSpeed(prePauseGameSpeed);
 }
 
 void Extension::aSetTickRate(int tickRate) {
@@ -1059,5 +1059,39 @@ void Extension::aLerpVector3(const TCHAR* vectorID1, const TCHAR* vectorID2, flo
 	newVector->SetY(y1 + (y2 - y1) * lerpAmount);
 	newVector->SetZ(z1 + (z2 - z1) * lerpAmount);
 }
+
+//=======================================================================================================================================================================================================
+//Editor
+
+void Extension::aComment(const TCHAR* comment) {
+	
+}
+
+//=======================================================================================================================================================================================================
+//Constants
+
+void Extension::aSetConstInt(const TCHAR* ID, int value) {
+	Constants::ConstInt::AddToArray(ID);
+	IntConst* constant = Constants::ConstInt::GetFromArray(ID);
+	constant->SetValue(value);
+}
+
+void Extension::aSetConstFloat(const TCHAR* ID, float value) {
+	Constants::ConstFloat::AddToArray(ID);
+	FloatConst* constant = Constants::ConstFloat::GetFromArray(ID);
+	constant->SetValue(value);
+}
+
+void Extension::aSetConstString(const TCHAR* ID, const TCHAR* value) {
+	Constants::ConstString::AddToArray(ID);
+	StrConst* constant = Constants::ConstString::GetFromArray(ID);
+	constant->SetValue(value);
+}
+
+void Extension::aDeleteConstInt(const TCHAR* ID) { Constants::ConstInt::RemoveFromArray(ID); }
+
+void Extension::aDeleteConstFloat(const TCHAR* ID) { Constants::ConstFloat::RemoveFromArray(ID); }
+
+void Extension::aDeleteConstString(const TCHAR* ID) { Constants::ConstString::RemoveFromArray(ID); }
 
 //=======================================================================================================================================================================================================
